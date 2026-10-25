@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f4f0">
+<title>NuSphere — Study clearly</title>
+<style>
+:root{--bg:#f5f4f0;--paper:#fffefa;--ink:#202b27;--muted:#858d85;--green:#315e4d;--soft:#eaf1eb;--line:#e5e7df;--red:#a64f43}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,sans-serif}
+button{font:inherit}
+.shell{max-width:850px;margin:auto;padding:0 24px}
+header{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e4e5de}
+.brand{font-size:21px;font-weight:800;letter-spacing:-1px}.brand i{color:#b18b4a;font-style:normal}
+.status{font-size:9px;letter-spacing:1.4px;color:var(--muted)}
+.hero{padding:70px 0 54px}
+.eyebrow{font-size:10px;letter-spacing:1.8px;font-weight:700;color:var(--green)}
+h1{font-size:clamp(42px,8vw,67px);line-height:1.08;letter-spacing:-3px;margin:20px 0 16px}
+h1 span{color:var(--green)}
+.hero p{color:var(--muted);font-size:14px;line-height:1.8;max-width:410px}
+.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:20px}
+.section-head h2{font-size:23px;letter-spacing:-.7px;margin:5px 0 0}
+.small-label{font-size:9px;letter-spacing:1.5px;color:var(--muted);font-weight:700}
+.subject{width:100%;display:flex;align-items:center;gap:18px;text-align:left;padding:25px;background:var(--paper);border:1px solid var(--line);border-radius:17px;cursor:pointer;color:var(--ink);transition:.2s}
+.subject:hover{border-color:#a8bca9;transform:translateY(-2px)}
+.subject-icon{width:54px;height:54px;flex-shrink:0;border-radius:16px;background:var(--soft);display:grid;place-items:center;color:var(--green);font-size:27px}
+.subject-info{flex:1}.subject-info h3{margin:7px 0;font-size:21px}.subject-info p{font-size:12px;line-height:1.6;color:var(--muted);margin:0 0 12px}
+.meta{font-size:10px;color:#718074}.arrow{font-size:24px;color:var(--green)}
+.future{margin:18px 0 65px;color:var(--muted);font-size:11px;line-height:1.7}
+.hidden{display:none!important}
+.quiz{padding:28px 0 60px}
+.quiz-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:30px}
+.back{border:0;background:none;color:var(--green);font-size:12px;cursor:pointer;padding:8px 0}
+.progress-line{display:flex;justify-content:space-between;font-size:9px;font-weight:700;letter-spacing:1px;color:var(--muted);margin-bottom:10px}
+.track{height:3px;background:#e0e4dc;border-radius:5px;overflow:hidden;margin-bottom:23px}
+.fill{height:100%;width:0;background:var(--green);transition:width .2s}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,5vw,38px);box-shadow:0 12px 35px #26372d08}
+.chip{display:inline-block;background:var(--soft);color:var(--green);font-size:9px;font-weight:700;letter-spacing:.6px;padding:8px 10px;border-radius:6px;margin-bottom:21px}
+.question{font-size:clamp(20px,4vw,27px);line-height:1.5;letter-spacing:-.6px;margin:0 0 12px}
+.hint{font-size:12px;color:var(--muted);margin:0 0 24px}
+.answers{display:grid;gap:10px}
+.option{width:100%;display:flex;align-items:center;gap:13px;text-align:left;padding:13px 14px;border:1px solid var(--line);background:#fffefa;border-radius:11px;cursor:pointer;color:#354139;font-size:13px;line-height:1.5}
+.option:hover:not(:disabled){border-color:#9eb3a0}
+.letter{width:27px;height:27px;flex-shrink:0;border:1px solid var(--line);border-radius:8px;display:grid;place-items:center;font-size:10px;font-weight:700;color:var(--muted)}
+.option.selected{border-color:var(--green);background:#f1f6f0}.option.selected .letter{background:var(--green);color:white}
+.option.correct{border-color:#7da087;background:#edf5ee}.option.correct .letter{background:#477a58;color:white}
+.option.wrong{border-color:#d9a097;background:#fbefec}.option.wrong .letter{background:var(--red);color:white}
+.option:disabled{cursor:default}
+.feedback{margin-top:19px;padding:16px;border-radius:11px;background:#eff5ef;border:1px solid #dce8dc}
+.feedback.wrong{background:#fbefec;border-color:#f0d8d2}
+.feedback strong{font-size:13px;color:var(--green)}.feedback.wrong strong{color:var(--red)}
+.feedback p{font-size:12px;line-height:1.8;color:#5d6a60;margin:9px 0 0}
+.actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:24px}
+.primary{border:0;border-radius:10px;background:var(--green);color:white;padding:14px 18px;font-size:12px;font-weight:700;cursor:pointer}
+.primary:disabled{opacity:.4;cursor:not-allowed}
+.skip{border:0;background:none;color:var(--muted);font-size:11px;cursor:pointer;padding:10px 0}
+.note{font-size:10px;line-height:1.7;color:#929a91;text-align:center;margin:18px 0}
+.results{text-align:center;padding:55px 0 75px}
+.results h2{font-size:32px;letter-spacing:-1px}.results p{font-size:13px;line-height:1.8;color:var(--muted)}
+.score{display:flex;justify-content:center;gap:40px;margin:28px auto;padding:24px;background:var(--paper);border:1px solid var(--line);border-radius:14px;max-width:380px}
+.score strong{display:block;font-size:27px;margin-top:8px}.score span{font-size:9px;letter-spacing:1px;color:var(--muted)}
+.review{display:grid;gap:10px;text-align:left;margin-top:25px}
+.review article{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:15px}
+.review h3{font-size:12px;line-height:1.7}.review p{font-size:11px;line-height:1.7;margin:5px 0}
+footer{border-top:1px solid var(--line);padding:23px 0 28px;display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}
+@media(max-width:520px){.shell{padding:0 18px}.hero{padding:55px 0 44px}h1{letter-spacing:-2.4px}.subject{padding:18px 15px;gap:13px}.subject-icon{width:44px;height:44px;border-radius:13px}.subject-info h3{font-size:18px}.subject-info p{font-size:11px}.quiz-top{margin-bottom:24px}.actions{gap:8px}.primary{padding:13px}.score{gap:25px}}
+
+.header-right{display:flex;align-items:center;gap:14px}
+.theme-toggle{width:35px;height:35px;display:grid;place-items:center;
+border:1px solid var(--line);border-radius:11px;background:var(--paper);
+color:var(--ink);font-size:19px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.theme-toggle:hover{border-color:var(--green)}
+body,.subject,.card,.score,.review article,.option,.feedback{transition:background-color .22s,color .22s,border-color .22s}
+body.dark-theme{
+--bg:#101311;--paper:#191e1a;--ink:#e8eee9;--muted:#a0aaa1;
+--green:#91c5a4;--soft:#26372c;--line:#303a32;--red:#e08d80;
+color-scheme:dark
+}
+body.dark-theme header{border-color:var(--line)}
+body.dark-theme .option{background:#191e1a;color:#e0e8e1}
+body.dark-theme .option.selected{background:#263b2d}
+body.dark-theme .option.correct{background:#203729}
+body.dark-theme .option.wrong{background:#3b2724}
+body.dark-theme .feedback{background:#203729;border-color:#304b38}
+body.dark-theme .feedback.wrong{background:#3b2724;border-color:#634039}
+body.dark-theme .feedback p{color:#c1cdc3}
+body.dark-theme .track{background:#303a32}
+body.dark-theme .meta{color:#a7b9aa}
+body.dark-theme footer{border-color:var(--line)}
+body.dark-theme .subject:hover{border-color:#648c70}
+@media(max-width:520px){.header-right{gap:9px}.status{font-size:8px;letter-spacing:1px}.theme-toggle{width:33px;height:33px}}
+
+</style>
+</head>
+<body>
+<div class="shell">
+<header>
+<div class="brand">NuSphere<i>.</i></div>
+<div class="header-right">
+<div class="status">YOUR STUDY SPACE</div>
+<button id="theme-toggle" class="theme-toggle" type="button"
+aria-label="Switch to dark mode" title="Switch theme">☾</button>
+</div>
+</header>
+<main>
+<section class="hero" id="hero">
+<div class="eyebrow">LEARN AT YOUR OWN PACE</div>
+<h1>Small steps.<br><span>Stronger knowledge.</span></h1>
+<p>A quiet place to practise, understand, and remember what matters.</p>
+</section>
+<section id="library">
+<div class="section-head"><div><div class="small-label">YOUR LIBRARY</div><h2>Choose a subject</h2></div><div class="small-label">01 SUBJECT</div></div>
+<button class="subject" id="start">
+<div class="subject-icon">＋</div>
+<div class="subject-info"><div class="small-label">NURSING · SUBJECT 01</div><h3>First Aid</h3><p>Emergency care, CPR, injuries, burns and more.</p><div class="meta">35 questions · True/False + Multiple choice</div></div>
+<div class="arrow">↗</div>
+</button>
+<p class="future">＋ &nbsp;More subjects soon. Anatomy, Pharmacology, Microbiology and your other lecture questions can be added here.</p>
+</section>
+<section id="quiz" class="quiz hidden">
+<div class="quiz-top"><button class="back" id="back">← Library</button><div class="small-label">FIRST AID · PRACTICE</div></div>
+<div class="progress-line"><span id="count"></span><span id="percent"></span></div>
+<div class="track"><div class="fill" id="fill"></div></div>
+<div class="card">
+<div class="chip" id="section"></div>
+<h2 class="question" id="question"></h2><p class="hint" id="hint"></p>
+<div class="answers" id="answers"></div>
+<div class="feedback hidden" id="feedback"><strong id="feedback-title"></strong><p id="feedback-answer"></p><p id="explanation"></p></div>
+<div class="actions"><button class="primary" id="next" disabled>Check answer →</button><button class="skip" id="skip">Skip for now</button></div>
+</div>
+<p class="note">Study aid only. In real emergencies, follow current first-aid training and local clinical protocols.</p>
+</section>
+<section id="results" class="results hidden">
+<div class="eyebrow">SESSION COMPLETE</div><h2>Practice makes progress.</h2><p>Review your answers and explanations, then practise again.</p>
+<div class="score"><div><span>YOUR SCORE</span><strong id="score">0 / 35</strong></div><div><span>ACCURACY</span><strong id="accuracy">0%</strong></div></div>
+<button class="primary" id="review-toggle">Review answers</button> <button class="primary" id="restart">Try again ↻</button>
+<div class="review hidden" id="review"></div>
+</section>
+</main>
+<footer><strong>NuSphere.</strong><span>Made for steady progress.</span></footer>
+</div>
+<script>
+const questions = [
+{g:'PART I · TRUE OR FALSE',t:1,q:'First Aid is the definitive and later care for trauma and acute illness patients.',o:['True','False'],a:1,e:'First aid is immediate initial assistance. Definitive treatment is provided by qualified health professionals.'},
+{g:'PART I · TRUE OR FALSE',t:1,q:'First aid intervention is mainly used to save lives.',o:['True','False'],a:0,e:'First aid aims to preserve life, prevent deterioration, and promote recovery.'},
+{g:'PART I · TRUE OR FALSE',t:1,q:'Artificial respiration is to facilitate flow of air into the lung from an environment only.',o:['True','False'],a:1,e:'Artificial ventilation helps move air into and out of the lungs, not just one way.'},
+{g:'PART I · TRUE OR FALSE',t:1,q:'CPR is mainly used only to restore circulation.',o:['True','False'],a:1,e:'CPR uses chest compressions and, when appropriate, rescue breaths to support circulation and oxygen delivery.'},
+{g:'PART I · TRUE OR FALSE',t:1,q:'During basic life support, checking scene safety is the first activity.',o:['True','False'],a:0,e:'Check the scene for danger before approaching, then assess responsiveness and call for emergency help.'},
+{g:'PART I · TRUE OR FALSE',t:1,q:'If signs of circulation exist but there is no breathing, immediately start CPR.',o:['True','False'],a:1,e:'If a pulse is present but breathing is absent, provide rescue breathing according to your training and monitor the pulse. CPR is needed when circulation is absent.'},
+{g:'PART I · TRUE OR FALSE',t:1,q:'There is no risk during mouth-to-mouth breathing because it is life-saving.',o:['True','False'],a:1,e:'Rescue breathing can involve infection risk. Use a barrier device when available and follow current training.'},
+{g:'PART I · TRUE OR FALSE',t:1,q:'For penetrating abdominal injuries, the best first aid is replacing protruding organs.',o:['True','False'],a:1,e:'Never push exposed organs back inside. Cover loosely with a sterile dressing moistened with sterile saline if available, and get emergency help.'},
+{g:'PART I · TRUE OR FALSE',t:1,q:'A closed fracture is a broken bone associated with an open wound.',o:['True','False'],a:1,e:'A closed fracture does not break through the skin. An open fracture has a wound communicating with the fracture.'},
+{g:'PART I · TRUE OR FALSE',t:1,q:'A strain is overstretching or tearing of muscles or tendons, for example during heavy lifting.',o:['True','False'],a:0,e:'A strain affects muscle or tendon; a sprain affects a ligament.'},
+{g:'PART II · CASE 1 · Q1',q:'Why do you give first aid to the injured woman with massive bleeding?',o:['Preserve life','Reduce worsening complications','Facilitate recovery','All of the above'],a:3,e:'All three are key aims of first aid: preserve life, prevent deterioration, and promote recovery.'},
+{g:'PART II · CASE 1 · Q2',q:'Which action is the best immediate priority for the patient with massive bleeding?',o:['Give food','Control the bleeding','Recommend she return home','Give pain medication'],a:1,e:'Apply firm direct pressure and get emergency help. Use a tourniquet for life-threatening limb bleeding if trained and indicated.'},
+{g:'PART II · CASE 1 · Q3',q:'Which type of shock is she most likely to develop after massive blood loss?',o:['Cardiogenic shock','Anaphylactic shock','Hypovolemic shock','Neurogenic shock'],a:2,e:'Hypovolemic shock occurs when severe blood or fluid loss reduces circulating blood volume.'},
+{g:'PART II · CASE 1 · Q4',q:'If she becomes irritable, dizzy, and confused, which listed vital sign can you check immediately?',o:['Pulse rate','Temperature','Pain','None of these'],a:0,e:'Pulse rate is a vital sign and may become rapid in shock. Do not delay bleeding control or emergency care.'},
+{g:'PART II · CASE 1 · Q5',q:'If she is unresponsive and has no pulse and no normal breathing, what should you do immediately?',o:['Give fluids by mouth','Give medication','Start CPR and activate emergency response','Only transfer the patient'],a:2,e:'Activate emergency help, obtain an AED if available, and start CPR immediately.'},
+{g:'PART II · CASE 1 · Q6',q:'Which action helps open the airway when spinal injury is not suspected?',o:['Mouth-to-mouth breathing first','Chest compressions before assessing','Head tilt–chin lift','Manually sweep the mouth'],a:2,e:'Head tilt–chin lift opens the airway when trauma is not suspected. With suspected spinal injury, a trained rescuer may try jaw thrust while minimizing neck movement; opening the airway remains essential.'},
+{g:'PART II · CASE 1 · Q7',q:'For an adult receiving conventional CPR, what is the standard compression-to-rescue-breath ratio?',o:['15:2','3:1','30:3','30:2'],a:3,e:'For adult CPR, use 30 compressions followed by 2 breaths when trained and able to provide breaths.'},
+{g:'PART II · FRACTURE',q:'A 24-year-old man has a lower right-leg fracture. What is the first-aid priority before definitive treatment?',o:['Immobilize the injured leg','Perform surgery','Give antibiotics','Begin physiotherapy'],a:0,e:'Support and immobilize the limb in the position found, check circulation beyond the injury, and arrange urgent care. Do not attempt to straighten it.'},
+{g:'PART II · CASE 2 · Q9',q:'After a fall where spinal injury is possible, which statement about opening the airway is most accurate?',o:['Always use head lift and chin tilt','Use head tilt–chin lift in every case','A trained rescuer may use jaw thrust while minimizing neck movement','Point the chin down and head up'],a:2,e:'A trained rescuer may try jaw thrust. If it does not open the airway, use head tilt–chin lift because opening the airway is essential.'},
+{g:'PART II · CASE 2 · Q10',q:'Which is NOT a recognized complication of chest compressions during CPR?',o:['Rib fractures','Flail chest','Internal organ injury','Diarrhea'],a:3,e:'Rib or chest injuries and rarely internal injury can occur during CPR. Diarrhea is not a typical mechanical complication.'},
+{g:'PART II · CASE 2 · Q11',q:'A decrease in blood pressure is called:',o:['Hypotension','Hypertension','Hypovolemia','All of the above'],a:0,e:'Hypotension means low blood pressure. Hypovolemia means reduced circulating blood volume and can cause hypotension.'},
+{g:'PART II · CASE 2 · Q12',q:'The term tachycardia refers to:',o:['High respiratory rate','High heart/pulse rate','Low respiratory rate','Low pulse rate'],a:1,e:'Tachycardia means an abnormally fast heart rate. Tachypnea means an abnormally fast respiratory rate.'},
+{g:'PART II · JOINT INJURY',q:'A 59-year-old woman falls and the bones at her knee joint appear displaced. What is the likely diagnosis?',o:['Sprain','Strain','Dislocation','Fracture'],a:2,e:'A dislocation is displacement of the bones forming a joint. Do not attempt to put it back in place.'},
+{g:'PART II · CASE 3 · Q14',q:'A woman has painful burns with edema and blisters involving the epidermis and part of the dermis. What is the burn depth?',o:['First-degree burn','Second-degree (partial-thickness) burn','Third-degree burn','Fourth-degree burn'],a:1,e:'Blisters and damage to the epidermis plus part of the dermis indicate a partial-thickness, commonly called second-degree, burn.'},
+{g:'PART II · CASE 3 · Q15',q:'The burned areas are the right arm, right leg, and right half of the anterior chest. Using the exam’s apparent Rule of Nines estimate, what is the total body surface area burned?',o:['33%','31.5%','40%','45%'],a:1,e:'The apparent estimate is right arm 9% + right leg 18% + half of the anterior chest about 4.5% = 31.5%. Exact estimates depend on the area actually burned.'},
+{g:'PART II · CASE 3 · Q16',q:'Which is the appropriate first-aid approach for a thermal burn?',o:['Avoid all wet cooling','Immediately break the blisters','Cool with cool running water and cover loosely with a clean non-stick dressing','Apply caffeine powder'],a:2,e:'Cool a thermal burn with cool running water for about 20 minutes as soon as possible. Do not use ice, powders, oils, or break blisters.'},
+{g:'PART II · CASE 3 · Q17',q:'Which type of shock can develop after a severe burn due to fluid loss?',o:['Neurogenic shock','Hypovolemic shock','Cardiogenic shock','Spinal shock'],a:1,e:'Severe burns can cause major fluid shifts and loss, leading to hypovolemic shock.'},
+{g:'PART II · POISONING',q:'A conscious patient swallowed kerosene 30 minutes ago. Which first-aid action is safest?',o:['Induce vomiting','Give water to relieve stomach pain','Give milk to relieve stomach pain','Do not induce vomiting or give food/drink; get urgent poison or emergency advice'],a:3,e:'Kerosene can enter the lungs if vomited and cause serious injury. Do not induce vomiting or give anything by mouth unless poison specialists direct you.'},
+{g:'PART II · RESPIRATION',q:'Which feature normally occurs during exhalation (breathing out) at rest?',o:['Intercostal muscles relax','Ribs lift upward','The chest expands','The diaphragm contracts'],a:0,e:'Quiet exhalation is usually passive: the diaphragm and external intercostal muscles relax, chest volume decreases, and air flows out.'},
+{g:'PART II · RESPIRATORY FAILURE',q:'Which can cause respiratory failure in an injured child?',o:['The tongue falling back and obstructing the airway','Massive bleeding contributing to shock','Neck trauma affecting the airway','All of the above'],a:3,e:'Airway obstruction, trauma, and severe bleeding with shock can all threaten oxygen delivery and breathing.'},
+{g:'PART II · EYE INJURY',q:'A child has a sharp object penetrating the eye. Which statement is FALSE about first aid?',o:['Do not try to remove the object','Do not press or wash the injured eye','Loosely cover both eyes to reduce eye movement, if possible without pressure','Secure the object without pressing on the eye and seek emergency care'],a:1,e:'Do not remove the object or press on the eye. Stabilize it with a protective shield and seek emergency care. Do not wash a penetrating injury.'},
+{g:'PART II · EAR INJURY',q:'A road-traffic injury causes a suspected ruptured eardrum with skull fracture and possible cerebrospinal fluid leakage. What is the correct first-aid approach?',o:['Clean inside the ear','Stop the fluid from coming out','Allow fluid to drain and loosely cover the ear without blocking it','Turn the injured person onto the injured side'],a:2,e:'Do not plug, clean, or try to stop possible cerebrospinal fluid leakage. Let it drain, cover loosely, minimize movement, and arrange emergency care.'},
+{g:'PART II · FOREIGN BODY IN EYE',q:'If you feel burning and suspect a loose particle in your eye, what is the safest first step?',o:['Rub the eye','Use a toothpick','Use any available instrument','Rinse gently with clean running water if no object is embedded'],a:3,e:'Do not rub or use instruments. Gentle irrigation may help a loose surface particle. If an object is embedded or vision changes, protect the eye and seek urgent care.'},
+{g:'PART II · DRESSINGS',q:'Which injuries commonly require a large bulk of dressing to pad and support the injured area?',o:['Fractures of the femur and humerus','Fractures of the forearm only','Fractures of the ankle and foot only','Fractures of the radius and ulna only'],a:0,e:'Large bones such as the femur and humerus may need substantial padding and support while immobilized. Obtain urgent medical care.'},
+{g:'PART II · HEAD INJURY',q:'A small open wound on the scalp bleeds profusely. What is the specific injury called?',o:['Scalp injury','Skull injury','Brain injury','Skull fracture'],a:0,e:'The scalp has a rich blood supply, so even a small scalp wound may bleed heavily. Avoid pressing directly over a suspected skull fracture or embedded object.'}
+];
+
+const $=id=>document.getElementById(id);
+let index=0,choice=null,checked=false,answers={};
+function start(){
+ index=0;choice=null;checked=false;answers={};
+ $('hero').classList.add('hidden');$('library').classList.add('hidden');$('results').classList.add('hidden');$('quiz').classList.remove('hidden');
+ render();window.scrollTo(0,0);
+}
+function render(){
+ const q=questions[index];choice=null;checked=false;
+ $('count').textContent=`QUESTION ${String(index+1).padStart(2,'0')} / ${questions.length}`;
+ $('percent').textContent=`${Math.round(index/questions.length*100)}% COMPLETE`;
+ $('fill').style.width=`${index/questions.length*100}%`;
+ $('section').textContent=q.g;$('question').textContent=q.q;
+ $('hint').textContent=q.t?'Choose True or False, then check your answer.':'Choose one answer, then check your answer.';
+ $('answers').replaceChildren();
+ q.o.forEach((txt,i)=>{
+  const b=document.createElement('button');b.className='option';b.type='button';
+  const letter=document.createElement('span');letter.className='letter';letter.textContent=String.fromCharCode(65+i);
+  const text=document.createElement('span');text.textContent=txt;b.append(letter,text);
+  b.onclick=()=>{if(checked)return;choice=i;[...$('answers').children].forEach((el,j)=>el.classList.toggle('selected',j===i));$('next').disabled=false;};
+  $('answers').append(b);
+ });
+ $('feedback').className='feedback hidden';$('next').disabled=true;$('next').textContent='Check answer →';$('skip').textContent='Skip for now';
+}
+function check(){
+ const q=questions[index];checked=true;answers[index]=choice;
+ const correct=choice===q.a;
+ [...$('answers').children].forEach((b,i)=>{b.disabled=true;if(i===q.a)b.classList.add('correct');else if(i===choice)b.classList.add('wrong');});
+ $('feedback').className='feedback'+(correct?'':' wrong');
+ $('feedback-title').textContent=correct?'Correct. Well done.':'Not quite — learn from it.';
+ $('feedback-answer').textContent=correct?`Your answer: ${q.o[choice]}`:`Correct answer: ${q.o[q.a]}`;
+ $('explanation').textContent=q.e;
+ $('next').textContent=index===questions.length-1?'See results →':'Next question →';
+ $('fill').style.width=`${(index+1)/questions.length*100}%`;
+ $('percent').textContent=`${Math.round((index+1)/questions.length*100)}% COMPLETE`;
+ $('skip').textContent='Continue';
+}
+function next(){
+ if(!checked){if(choice!==null)check();return;}
+ if(index<questions.length-1){index++;render();window.scrollTo(0,0);}else results();
+}
+function skip(){
+ if(checked){next();return;}
+ answers[index]=null;
+ if(index<questions.length-1){index++;render();}else results();
+}
+function results(){
+ $('quiz').classList.add('hidden');$('results').classList.remove('hidden');
+ const total=questions.reduce((n,q,i)=>n+(answers[i]===q.a?1:0),0);
+ $('score').textContent=`${total} / ${questions.length}`;
+ $('accuracy').textContent=`${Math.round(total/questions.length*100)}%`;
+ $('review').classList.add('hidden');$('review').replaceChildren();$('review-toggle').textContent='Review answers';
+ window.scrollTo(0,0);
+}
+function review(){
+ const box=$('review');
+ if(!box.classList.contains('hidden')){box.classList.add('hidden');$('review-toggle').textContent='Review answers';return;}
+ box.replaceChildren();
+ questions.forEach((q,i)=>{
+  const a=document.createElement('article');
+  const h=document.createElement('h3');h.textContent=`${i+1}. ${q.q}`;
+  const result=document.createElement('p');
+  result.textContent=answers[i]===q.a?`Correct · ${q.o[q.a]}`:`Correct answer · ${q.o[q.a]}${answers[i]===null||answers[i]===undefined?' · Skipped':` · Your answer: ${q.o[answers[i]]}`}`;
+  result.style.color=answers[i]===q.a?'#315e4d':'#a64f43';
+  const exp=document.createElement('p');exp.textContent=q.e;a.append(h,result,exp);box.append(a);
+ });
+ box.classList.remove('hidden');$('review-toggle').textContent='Hide review';box.scrollIntoView({behavior:'smooth'});
+}
+$('start').onclick=start;
+$('back').onclick=()=>{$('quiz').classList.add('hidden');$('hero').classList.remove('hidden');$('library').classList.remove('hidden');window.scrollTo(0,0);};
+$('next').onclick=next;$('skip').onclick=skip;$('restart').onclick=start;$('review-toggle').onclick=review;
+</script>
+
+<script>
+(() => {
+  const button = document.getElementById("theme-toggle");
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+
+  function applyTheme(dark) {
+    document.body.classList.toggle("dark-theme", dark);
+    button.textContent = dark ? "☀" : "☾";
+    button.setAttribute("aria-label",
+      dark ? "Switch to light mode" : "Switch to dark mode");
+    button.title = dark ? "Switch to light mode" : "Switch to dark mode";
+    if (themeColor) themeColor.content = dark ? "#101311" : "#f5f4f0";
+  }
+
+  let savedTheme = false;
+  try {
+    savedTheme = localStorage.getItem("nusphere-theme") === "dark";
+  } catch (_) {}
+
+  applyTheme(savedTheme);
+
+  button.addEventListener("click", () => {
+    const dark = !document.body.classList.contains("dark-theme");
+    applyTheme(dark);
+    try {
+      localStorage.setItem("nusphere-theme", dark ? "dark" : "light");
+    } catch (_) {}
+  });
+})();
+</script>
+
+</body>
+</html>
