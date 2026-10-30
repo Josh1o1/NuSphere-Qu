@@ -23,7 +23,9 @@ h1 span{color:var(--green)}
 .section-head h2{font-size:23px;letter-spacing:-.7px;margin:5px 0 0}
 .small-label{font-size:9px;letter-spacing:1.5px;color:var(--muted);font-weight:700}
 .subject{width:100%;display:flex;align-items:center;gap:18px;text-align:left;padding:25px;background:var(--paper);border:1px solid var(--line);border-radius:17px;cursor:pointer;color:var(--ink);transition:.2s}
-.subject:hover{border-color:#a8bca9;transform:translateY(-2px)}
+.subjects-list{display:grid;gap:15px;margin-bottom:20px}
+.subject:hover:not(:disabled){border-color:#a8bca9;transform:translateY(-2px);box-shadow:0 8px 22px #26372d0a}
+.subject:disabled{cursor:not-allowed;opacity:.78}
 .subject-icon{width:54px;height:54px;flex-shrink:0;border-radius:16px;background:var(--soft);display:grid;place-items:center;color:var(--green);font-size:27px}
 .subject-info{flex:1}.subject-info h3{margin:7px 0;font-size:21px}.subject-info p{font-size:12px;line-height:1.6;color:var(--muted);margin:0 0 12px}
 .meta{font-size:10px;color:#718074}.arrow{font-size:24px;color:var(--green)}
