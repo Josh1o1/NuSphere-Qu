@@ -17,7 +17,7 @@ const subjects = [
     file: 'subjects/physiology-ii.json',
     count: 30,
     icon: 'Ⅱ',
-    ready: false
+    ready: true
   }
 ];
 

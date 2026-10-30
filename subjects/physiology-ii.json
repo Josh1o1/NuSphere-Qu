@@ -1,0 +1,212 @@
+[
+  {
+    "g":"GIT OVERVIEW AND HOMEOSTASIS","difficulty":"Beginner","topic":"Alimentary Canal and Accessory Organs","slide":"2",
+    "q":"Which structure is classified as an accessory digestive organ rather than a primary segment of the alimentary canal?",
+    "o":["Esophagus","Stomach","Pancreas","Rectum"],"a":2,
+    "e":"The alimentary canal includes the mouth, pharynx, esophagus, stomach, intestines and anus. Accessory organs include the teeth, tongue, salivary glands, liver, gallbladder and pancreas. They contribute secretions that help digestion.",
+    "why":["The esophagus is a muscular tube of the alimentary canal.","The stomach is a primary organ of the alimentary canal.","The rectum is the terminal part of the alimentary canal."]
+  },
+  {
+    "g":"GIT OVERVIEW AND HOMEOSTASIS","difficulty":"Intermediate","topic":"Fluid Balance","slide":"5",
+    "q":"Approximately how much fluid is absorbed daily by the small intestine out of the total 9 liters entering the GIT lumen?",
+    "o":["50–100 mL","400 mL","8.5 liters","2 liters"],"a":2,
+    "e":"Approximately 9 liters enter the GIT daily: around 7 liters from secretions and 2 liters from drinking. The small intestine absorbs approximately 8.5 liters.",
+    "why":["50–100 mL is approximately the amount lost in feces.","About 400 mL is absorbed by the large intestine in this lecture estimate.","2 liters represents approximately the fluid ingested daily."]
+  },
+  {
+    "g":"GIT OVERVIEW AND HOMEOSTASIS","difficulty":"Advanced","topic":"Circulatory Effects of Fluid Loss","slide":"5",
+    "q":"A patient develops severe secretory diarrhea. Which immediate systemic effect is most directly threatened?",
+    "o":["Immediate cessation of pancreatic enzyme synthesis","Reduced total blood volume and disturbed circulation","Permanent remodeling of the myenteric plexus","Complete arrest of hepatic bile production"],"a":1,
+    "e":"Severe gastrointestinal fluid loss can cause dehydration and hypovolemia, reducing circulating blood volume and compromising circulation.",
+    "why":["Pancreatic enzyme production is regulated mainly by hormonal and neural signals.","Fluid loss does not permanently remodel enteric nerve structures.","Diarrhea does not directly switch off hepatic bile production."]
+  },
+  {
+    "g":"GIT OVERVIEW AND HOMEOSTASIS","difficulty":"Intermediate","topic":"Microbial Defense","slide":"6",
+    "q":"Which cells in the small intestinal mucosa develop from monocytes and destroy microbial invaders through phagocytosis?",
+    "o":["Goblet cells","Parietal cells","Macrophages","Chief cells"],"a":2,
+    "e":"Macrophages develop from circulating monocytes and help defend the intestinal mucosa by engulfing and destroying microorganisms through phagocytosis.",
+    "why":["Goblet cells secrete protective mucus.","Parietal cells are gastric cells that secrete hydrochloric acid and intrinsic factor.","Chief cells are gastric cells that secrete pepsinogen."]
+  },
+  {
+    "g":"NEURAL REGULATION OF THE GIT","difficulty":"Advanced","topic":"Vagus Nerve Sensory Afferents","slide":"7",
+    "q":"What percentage of fibers in the vagus nerve are sensory afferents rather than motor efferents?",
+    "o":["Less than 20%","Exactly 50%","More than 80%","100%"],"a":2,
+    "e":"More than 80% of vagal nerve fibers are sensory afferents. They carry information from the gut toward the brainstem and other central nervous system centers.",
+    "why":["This underestimates the proportion of sensory fibers.","The sensory and motor fibers are not distributed equally.","The vagus nerve also contains motor efferent fibers."]
+  },
+  {
+    "g":"NEURAL REGULATION OF THE GIT","difficulty":"Intermediate","topic":"Autonomic Nervous System","slide":"8",
+    "q":"Which neurotransmitter characterizes parasympathetic innervation of the GIT, and what is its general effect?",
+    "o":["Adrenergic; inhibits motility and constricts sphincters","Cholinergic (acetylcholine); generally increases motility and relaxes sphincters","Dopaminergic; stops intestinal movement","Serotonergic exclusively; prevents reflex contractions"],"a":1,
+    "e":"Parasympathetic input is primarily cholinergic, using acetylcholine. It generally increases gastrointestinal activity and motility and promotes sphincter relaxation during coordinated movement.",
+    "why":["Adrenergic activity is associated mainly with sympathetic effects, which generally inhibit gut activity.","Dopamine is not the principal parasympathetic neurotransmitter.","Serotonin participates in enteric signaling but is not the exclusive parasympathetic neurotransmitter."]
+  },
+  {
+    "g":"NEURAL REGULATION OF THE GIT","difficulty":"Beginner","topic":"Enteric Nervous System Plexuses","slide":"9",
+    "q":"Which enteric nervous system plexus primarily controls gastrointestinal secretions and local blood flow?",
+    "o":["Myenteric plexus (Auerbach's plexus)","Submucosal plexus (Meissner's plexus)","Celiac ganglion","Superior mesenteric ganglion"],"a":1,
+    "e":"The submucosal plexus regulates gastrointestinal secretion and local blood flow. The myenteric plexus primarily regulates gut motility.",
+    "why":["The myenteric plexus mainly controls gastrointestinal muscle activity and motility.","The celiac ganglion is a sympathetic ganglion, not an intrinsic enteric plexus.","The superior mesenteric ganglion is a sympathetic ganglion, not an intrinsic enteric plexus."]
+  },
+  {
+    "g":"SALIVARY GLANDS AND SECRETION","difficulty":"Beginner","topic":"Major Salivary Glands","slide":"10",
+    "q":"Which major salivary glands contribute approximately 25% of total saliva and produce mainly watery serous fluid rich in ptyalin?",
+    "o":["Submandibular glands","Sublingual glands","Parotid glands","Buccal glands"],"a":2,
+    "e":"The parotid glands contribute approximately 25% of saliva and produce predominantly serous, watery secretion containing salivary amylase (ptyalin).",
+    "why":["Submandibular glands produce approximately 70% of saliva.","Sublingual glands contribute approximately 5% and produce mainly mucus-rich secretion.","Buccal glands are minor salivary glands."]
+  },
+  {
+    "g":"SALIVARY GLANDS AND SECRETION","difficulty":"Intermediate","topic":"Saliva Composition","slide":"11",
+    "q":"What percentage of saliva is water, and what is one important function of this water?",
+    "o":["50%; provides hydrochloric acid","84%; excretes bilirubin","99.5%; dissolves substances and facilitates taste","90%; activates pancreatic trypsinogen"],"a":2,
+    "e":"Saliva is approximately 99.5% water. Water dissolves food substances, allowing them to interact with taste receptors and helping moisten food.",
+    "why":["Saliva does not contain hydrochloric acid; the stomach produces it.","Approximately 84% water is the lecture estimate for bile, not saliva.","Trypsinogen is activated in the small intestine by enteropeptidase."]
+  },
+  {
+    "g":"SALIVARY GLANDS AND SECRETION","difficulty":"Intermediate","topic":"Phases of Salivary Secretion","slide":"12",
+    "q":"Which phase of salivary secretion is triggered by higher brain activities such as thinking about, smelling or seeing food?",
+    "o":["Oral phase","Cephalic phase","Gastric phase","Intestinal phase"],"a":1,
+    "e":"The cephalic phase is initiated by higher brain centers. The sight, smell, thought or anticipation of food can stimulate salivary secretion.",
+    "why":["The oral phase is stimulated by food contacting taste and touch receptors in the mouth.","The gastric phase relates to stimulation associated with the stomach.","There is no standard intestinal phase of salivary secretion."]
+  },
+  {
+    "g":"GASTRIC FUNCTION AND PROTECTION","difficulty":"Intermediate","topic":"Gastric Secretory Cells","slide":"14",
+    "q":"Which gastric cells secrete somatostatin, a hormone that inhibits gastrointestinal secretory activity?",
+    "o":["Parietal cells","Chief cells","G-cells","D-cells"],"a":3,
+    "e":"D-cells in the gastric mucosa secrete somatostatin, which inhibits gastric secretion, including by suppressing gastrin release.",
+    "why":["Parietal cells secrete hydrochloric acid and intrinsic factor.","Chief cells secrete pepsinogen.","G-cells secrete gastrin, which stimulates gastric acid secretion."]
+  },
+  {
+    "g":"GASTRIC FUNCTION AND PROTECTION","difficulty":"Advanced","topic":"Phases of Gastric Secretion","slide":"15",
+    "q":"Which phase accounts for approximately 80% of total gastric secretion?",
+    "o":["Cephalic phase","Gastric phase","Intestinal phase","Salivary oral phase"],"a":1,
+    "e":"The gastric phase is the largest phase in this lecture estimate. Food distension and chemical stimulation of the stomach promote neural reflexes and gastrin release.",
+    "why":["The cephalic phase accounts for a smaller proportion, approximately 15% in the lecture estimate.","The intestinal phase accounts for a small proportion, approximately 5% in the lecture estimate.","The oral phase is associated with salivary secretion, not gastric secretion."]
+  },
+  {
+    "g":"GASTRIC FUNCTION AND PROTECTION","difficulty":"Beginner","topic":"Hydrochloric Acid Function","slide":"16",
+    "q":"What is the primary enzymatic activation role of hydrochloric acid (HCl) in the stomach?",
+    "o":["Converts trypsinogen into trypsin","Converts pepsinogen into pepsin","Converts cellulose into glucose","Emulsifies fat into micelles"],"a":1,
+    "e":"Hydrochloric acid helps convert inactive pepsinogen, released by chief cells, into active pepsin, which digests proteins.",
+    "why":["Trypsinogen is activated in the small intestine by enteropeptidase.","Humans cannot digest cellulose using gastric acid.","Bile salts emulsify fats in the small intestine."]
+  },
+  {
+    "g":"GASTRIC FUNCTION AND PROTECTION","difficulty":"Advanced","topic":"Gastric Mucosal Barrier","slide":"17",
+    "q":"How do surface mucous cells protect the stomach lining from highly acidic gastric contents?",
+    "o":["They secrete bicarbonate to buffer acid within the mucus layer","They maintain permanent sympathetic vasoconstriction","They produce large amounts of active trypsin inhibitor","They cover the stomach with keratinized squamous cells"],"a":0,
+    "e":"Surface mucous cells secrete mucus and bicarbonate. The mucus-bicarbonate barrier neutralizes acid near the epithelial surface and helps maintain a much higher pH at the cell surface than in the stomach lumen.",
+    "why":["Permanent vasoconstriction could reduce blood supply and damage the mucosa.","Trypsin inhibitor is associated with pancreatic protection, not the main gastric mucosal barrier.","The stomach lining is simple columnar epithelium, not keratinized squamous epithelium."]
+  },
+  {
+    "g":"PANCREATIC AND BILIARY SYSTEMS","difficulty":"Intermediate","topic":"Exocrine Pancreas","slide":"19",
+    "q":"Which exocrine pancreatic cells synthesize and secrete digestive enzymes in response to cholecystokinin (CCK)?",
+    "o":["Ductal cells","Acinar cells","Islet beta cells","Kupffer cells"],"a":1,
+    "e":"Pancreatic acinar cells produce digestive enzymes, many of which are released as inactive precursors to help prevent pancreatic self-digestion. CCK stimulates enzyme secretion.",
+    "why":["Ductal cells mainly secrete bicarbonate-rich fluid in response to secretin.","Islet beta cells release insulin and perform an endocrine function.","Kupffer cells are macrophages located in the liver."]
+  },
+  {
+    "g":"PANCREATIC AND BILIARY SYSTEMS","difficulty":"Intermediate","topic":"Phases of Pancreatic Secretion","slide":"20",
+    "q":"Which phase accounts for approximately 80% of pancreatic juice secretion and is stimulated when acidic chyme and fats enter the duodenum?",
+    "o":["Cephalic phase","Gastric phase","Intestinal phase","Oral phase"],"a":2,
+    "e":"The intestinal phase is the major phase of pancreatic secretion. Acidic chyme stimulates secretin release, while fats and amino acids stimulate CCK release.",
+    "why":["The cephalic phase is stimulated through anticipatory neural pathways and contributes a smaller proportion.","The gastric phase is stimulated by stomach activity and contributes a smaller proportion.","The oral phase relates to salivary secretion, not pancreatic secretion."]
+  },
+  {
+    "g":"PANCREATIC AND BILIARY SYSTEMS","difficulty":"Beginner","topic":"Bile and Fat Digestion","slide":"21",
+    "q":"What is the primary digestive function of bile during lipid digestion?",
+    "o":["Hydrolyzing disaccharides","Emulsifying large fat globules into smaller droplets","Breaking proteins into amino acids","Digesting cellulose directly"],"a":1,
+    "e":"Bile salts emulsify large fat globules into smaller droplets, increasing the surface area available to pancreatic lipase. Micelles subsequently help transport lipid digestion products toward the intestinal surface.",
+    "why":["Disaccharides are broken down by enzymes at the small intestinal brush border.","Protein digestion is performed by proteolytic enzymes.","Bile does not digest cellulose."]
+  },
+  {
+    "g":"PANCREATIC AND BILIARY SYSTEMS","difficulty":"Intermediate","topic":"Composition of Bile","slide":"22",
+    "q":"Which constituent makes up the largest proportion of hepatic bile, approximately 84% in the lecture estimate?",
+    "o":["Bile salts","Bilirubin","Water","Cholesterol"],"a":2,
+    "e":"Water is the largest component of bile. The lecture estimate is approximately 84%, with bile salts and other organic and inorganic substances making up the remainder.",
+    "why":["Bile salts make up a smaller proportion of bile.","Bilirubin is a pigment present in a much smaller proportion.","Cholesterol is one of the organic constituents and is not the largest component."]
+  },
+  {
+    "g":"PANCREATIC AND BILIARY SYSTEMS","difficulty":"Advanced","topic":"Excretory Function of Bile","slide":"23",
+    "q":"Which toxic metabolic end-product is excreted from the bloodstream through bile?",
+    "o":["Ptyalin","Bilirubin","Pepsinogen","Trypsinogen"],"a":1,
+    "e":"Bilirubin is produced during the breakdown of heme from old red blood cells. The liver processes it and excretes it into bile.",
+    "why":["Ptyalin is salivary amylase.","Pepsinogen is an inactive protein-digesting enzyme released by gastric chief cells.","Trypsinogen is an inactive pancreatic digestive enzyme."]
+  },
+  {
+    "g":"PANCREATIC AND BILIARY SYSTEMS","difficulty":"Advanced","topic":"Gallstone Formation","slide":"24",
+    "q":"Which combination of factors contributes directly to gallstone formation (cholelithiasis)?",
+    "o":["Excess water or bile acid absorption, high cholesterol concentration and epithelial inflammation","Excess salivary lysozyme and reduced gastrin","Excess pancreatic bicarbonate entering the gallbladder","Low dietary cellulose and destruction of bile salts"],"a":0,
+    "e":"Gallstone formation can involve excessive water absorption from bile, excessive bile acid absorption, cholesterol supersaturation and inflammation of the gallbladder epithelium.",
+    "why":["Salivary lysozyme and gastrin are not direct causes of gallstones.","Pancreatic bicarbonate enters the duodenum through the pancreatic duct, not the gallbladder.","Dietary cellulose deficiency is not a direct mechanism of gallstone formation."]
+  },
+  {
+    "g":"SMALL INTESTINE","difficulty":"Beginner","topic":"Anatomical Divisions","slide":"25",
+    "q":"What are the three anatomical divisions of the small intestine in order from the stomach toward the large intestine?",
+    "o":["Cecum, colon, rectum","Duodenum, jejunum, ileum","Esophagus, stomach, duodenum","Fundus, body, antrum"],"a":1,
+    "e":"The small intestine consists of the duodenum, jejunum and ileum, in that order.",
+    "why":["The cecum, colon and rectum are parts of the large intestine.","The esophagus and stomach are located before the small intestine.","Fundus, body and antrum are regions of the stomach."]
+  },
+  {
+    "g":"SMALL INTESTINE","difficulty":"Intermediate","topic":"Nutrient Absorption","slide":"25",
+    "q":"Which major function is predominantly shared by the jejunum and ileum?",
+    "o":["Storage and evacuation of solid waste","Production of gastric HCl and intrinsic factor","Nutrient absorption","Secretion of salivary ptyalin"],"a":2,
+    "e":"The jejunum and ileum are major sites of nutrient absorption. The duodenum also absorbs nutrients but has important digestive and secretory functions.",
+    "why":["Storage and evacuation of feces are functions of the large intestine and rectum.","Gastric HCl and intrinsic factor are secreted by parietal cells in the stomach.","Ptyalin is produced by salivary glands."]
+  },
+  {
+    "g":"SMALL INTESTINE","difficulty":"Advanced","topic":"Crypts of Lieberkühn","slide":"28",
+    "q":"What are the Crypts of Lieberkühn, located between intestinal villi, and what do they secrete?",
+    "o":["Gastric pits that secrete concentrated HCl","Intestinal glands that secrete fluid containing water and electrolytes","Bile canaliculi that secrete bilirubin","Pancreatic structures that secrete glucagon"],"a":1,
+    "e":"Crypts of Lieberkühn are intestinal glands located between villi. They secrete intestinal fluid containing water and electrolytes, helping maintain the environment for digestion and absorption.",
+    "why":["Gastric pits are found in the stomach and are associated with gastric secretions.","Bile canaliculi carry bile produced by hepatocytes.","Glucagon is secreted by pancreatic alpha cells."]
+  },
+  {
+    "g":"SMALL INTESTINE","difficulty":"Intermediate","topic":"Brush-Border Digestion","slide":"27",
+    "q":"How do brush-border enzymes help process disaccharides and small peptides before absorption?",
+    "o":["They break disaccharides into monosaccharides and peptides into smaller absorbable units","They use HCl to convert carbohydrates into fatty acids","They transport intact disaccharides directly into lymphatic lacteals","They ferment peptides using colonic bacteria"],"a":0,
+    "e":"Brush-border enzymes, including disaccharidases and peptidases, complete digestion at the surface of small intestinal epithelial cells. This produces smaller units that can be absorbed.",
+    "why":["HCl is produced in the stomach and does not convert carbohydrates into fatty acids.","Disaccharides generally must be broken down before absorption.","Brush-border digestion occurs in the small intestine, not through colonic bacterial fermentation."]
+  },
+  {
+    "g":"LARGE INTESTINE","difficulty":"Beginner","topic":"Colonic Absorption","slide":"29",
+    "q":"What are the primary substances absorbed by the colon during fecal formation?",
+    "o":["Dietary proteins and large polypeptides","Water and electrolytes, mainly sodium and chloride","Emulsified fat droplets and chylomicrons","Hydrochloric acid and intrinsic factor"],"a":1,
+    "e":"The large intestine absorbs water and electrolytes, especially sodium and chloride. This helps concentrate intestinal contents into feces.",
+    "why":["Most dietary protein digestion and absorption occur in the small intestine.","Most dietary fat absorption occurs in the small intestine.","HCl and intrinsic factor are gastric secretions, not the primary substances absorbed by the colon."]
+  },
+  {
+    "g":"LARGE INTESTINE","difficulty":"Advanced","topic":"Colonic Microflora and Cellulose","slide":"29",
+    "q":"Humans cannot digest cellulose with their own digestive enzymes. How do colonic microbes contribute to its processing and to nutrition?",
+    "o":["Gastric juice digests cellulose and microbes produce bile salts","Microbes ferment some dietary fiber and can synthesize vitamin K and certain B vitamins","Microbes convert cellulose into pepsin","Cellulose is absorbed intact through the taenia coli"],"a":1,
+    "e":"Colonic bacteria ferment some dietary fiber, producing substances such as short-chain fatty acids. They can also synthesize vitamin K and some B vitamins, although the amount available to the body varies.",
+    "why":["Gastric juice does not digest cellulose, and bile salts are produced by the liver.","Pepsin is a gastric protein-digesting enzyme, not a product made from cellulose.","The taenia coli are longitudinal muscle bands, not absorptive channels."]
+  },
+  {
+    "g":"GIT DISORDERS","difficulty":"Intermediate","topic":"GERD","slide":"30",
+    "q":"Gastroesophageal reflux disease (GERD) commonly causes heartburn because of which physiological abnormality?",
+    "o":["Failure of the lower esophageal sphincter to prevent reflux of gastric contents","Permanent closure of the upper esophageal sphincter","Absence of goblet cells throughout the colon","Excess salivary ptyalin production"],"a":0,
+    "e":"GERD occurs when the antireflux barrier, commonly involving the lower esophageal sphincter, is ineffective. Gastric contents can then flow backward into the esophagus and irritate its lining.",
+    "why":["Failure of the lower esophageal sphincter to relax is associated with achalasia.","The colon is not the site responsible for GERD.","Salivary ptyalin does not cause gastric reflux."]
+  },
+  {
+    "g":"GIT DISORDERS","difficulty":"Advanced","topic":"Achalasia","slide":"30",
+    "q":"What happens to the lower esophageal sphincter in achalasia, and what complication can follow?",
+    "o":["It remains open, allowing acid to damage the esophagus","It fails to relax, causing food retention and dilation of the esophagus","The pyloric sphincter closes permanently, trapping bile","The ileocecal valve ruptures"],"a":1,
+    "e":"In achalasia, the lower esophageal sphincter does not relax normally during swallowing. Food can accumulate in the esophagus, causing dilation and regurgitation.",
+    "why":["A persistently weak or ineffective antireflux barrier is associated with GERD.","Achalasia affects the lower esophageal sphincter, not the pyloric sphincter.","The ileocecal valve is unrelated to achalasia."]
+  },
+  {
+    "g":"GIT DISORDERS","difficulty":"Intermediate","topic":"Constipation","slide":"31",
+    "q":"How does reduced intestinal motility cause hard, dry feces, and how does dietary fiber help?",
+    "o":["It reduces transit time; fiber dries the stool","It increases transit time and water reabsorption; fiber increases fecal bulk and helps stimulate motility","It increases pancreatic lipase; fiber neutralizes gastric acid","It stops all colonic fermentation; fiber destroys bile salts"],"a":1,
+    "e":"Slow colonic transit allows more time for water absorption, making stool harder and drier. Fiber increases stool bulk and can help promote bowel movement.",
+    "why":["Reduced motility generally increases, rather than decreases, transit time.","Pancreatic lipase and gastric acid are not the main mechanisms behind constipation.","Colonic fermentation does not normally stop completely, and fiber does not destroy bile salts."]
+  },
+  {
+    "g":"GIT DISORDERS","difficulty":"Advanced","topic":"Diarrhea and Anxiety","slide":"32",
+    "q":"How can severe anxiety contribute to diarrhea through its effects on gastrointestinal activity?",
+    "o":["Increased sympathetic activity always accelerates intestinal movement","Increased parasympathetic activity may increase lower bowel motility and reduce absorption time","Complete inhibition of sensory afferents stops peristalsis","Salivary lysozyme destroys intestinal epithelial cells"],"a":1,
+    "e":"Emotional stress can alter autonomic regulation of the gut. In some people, increased intestinal motility reduces the time available for water absorption and contributes to loose stools.",
+    "why":["Sympathetic activity generally inhibits gastrointestinal motility rather than explaining this mechanism.","Sensory afferent inhibition does not explain anxiety-related increased bowel activity.","Salivary lysozyme is not responsible for anxiety-induced diarrhea."]
+  }
+]
