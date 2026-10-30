@@ -1,2 +1,6 @@
 index.html.backup-*
 .nusphere-check.js
+
+# Local development server
+.server.pid
+logs/

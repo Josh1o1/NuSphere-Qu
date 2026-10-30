@@ -111,15 +111,11 @@ aria-label="Switch to dark mode" title="Switch theme">☾</button>
 </section>
 <section id="library">
 <div class="section-head"><div><div class="small-label">YOUR LIBRARY</div><h2>Choose a subject</h2></div><div class="small-label">01 SUBJECT</div></div>
-<button class="subject" id="start">
-<div class="subject-icon">＋</div>
-<div class="subject-info"><div class="small-label">NURSING · SUBJECT 01</div><h3>First Aid</h3><p>Emergency care, CPR, injuries, burns and more.</p><div class="meta">35 questions · True/False + Multiple choice</div></div>
-<div class="arrow">↗</div>
-</button>
-<p class="future">＋ &nbsp;More subjects soon. Anatomy, Pharmacology, Microbiology and your other lecture questions can be added here.</p>
+<div id="subjects-list" class="subjects-list"></div>
+<p class="future">More subjects and lecture topics will be added to your study library.</p>
 </section>
 <section id="quiz" class="quiz hidden">
-<div class="quiz-top"><button class="back" id="back">← Library</button><div class="small-label">FIRST AID · PRACTICE</div></div>
+<div class="quiz-top"><button class="back" id="back">← Library</button><div class="small-label" id="subject-heading">FIRST AID · PRACTICE</div></div>
 <div class="progress-line"><span id="count"></span><span id="percent"></span></div>
 <div class="track"><div class="fill" id="fill"></div></div>
 <div class="card">
@@ -127,7 +123,7 @@ aria-label="Switch to dark mode" title="Switch theme">☾</button>
 <h2 class="question" id="question"></h2><p class="hint" id="hint"></p>
 <div class="answers" id="answers"></div>
 <div class="feedback hidden" id="feedback"><strong id="feedback-title"></strong><p id="feedback-answer"></p><p id="explanation"></p></div>
-<div class="actions"><button class="primary" id="next" disabled>Check answer →</button><button class="skip" id="skip">Skip for now</button></div>
+<div class="actions"><button class="skip" id="previous" disabled>← Previous</button><button class="primary" id="next" disabled>Check answer →</button><button class="skip" id="skip">Skip for now</button></div>
 </div>
 <p class="note">Study aid only. In real emergencies, follow current first-aid training and local clinical protocols.</p>
 </section>
@@ -140,117 +136,7 @@ aria-label="Switch to dark mode" title="Switch theme">☾</button>
 </main>
 <footer><strong>NuSphere.</strong><span>Made for steady progress.</span></footer>
 </div>
-<script>
-const questions = [
-{g:'PART I · TRUE OR FALSE',t:1,q:'First Aid is the definitive and later care for trauma and acute illness patients.',o:['True','False'],a:1,e:'First aid is immediate initial assistance. Definitive treatment is provided by qualified health professionals.'},
-{g:'PART I · TRUE OR FALSE',t:1,q:'First aid intervention is mainly used to save lives.',o:['True','False'],a:0,e:'First aid aims to preserve life, prevent deterioration, and promote recovery.'},
-{g:'PART I · TRUE OR FALSE',t:1,q:'Artificial respiration is to facilitate flow of air into the lung from an environment only.',o:['True','False'],a:1,e:'Artificial ventilation helps move air into and out of the lungs, not just one way.'},
-{g:'PART I · TRUE OR FALSE',t:1,q:'CPR is mainly used only to restore circulation.',o:['True','False'],a:1,e:'CPR uses chest compressions and, when appropriate, rescue breaths to support circulation and oxygen delivery.'},
-{g:'PART I · TRUE OR FALSE',t:1,q:'During basic life support, checking scene safety is the first activity.',o:['True','False'],a:0,e:'Check the scene for danger before approaching, then assess responsiveness and call for emergency help.'},
-{g:'PART I · TRUE OR FALSE',t:1,q:'If signs of circulation exist but there is no breathing, immediately start CPR.',o:['True','False'],a:1,e:'If a pulse is present but breathing is absent, provide rescue breathing according to your training and monitor the pulse. CPR is needed when circulation is absent.'},
-{g:'PART I · TRUE OR FALSE',t:1,q:'There is no risk during mouth-to-mouth breathing because it is life-saving.',o:['True','False'],a:1,e:'Rescue breathing can involve infection risk. Use a barrier device when available and follow current training.'},
-{g:'PART I · TRUE OR FALSE',t:1,q:'For penetrating abdominal injuries, the best first aid is replacing protruding organs.',o:['True','False'],a:1,e:'Never push exposed organs back inside. Cover loosely with a sterile dressing moistened with sterile saline if available, and get emergency help.'},
-{g:'PART I · TRUE OR FALSE',t:1,q:'A closed fracture is a broken bone associated with an open wound.',o:['True','False'],a:1,e:'A closed fracture does not break through the skin. An open fracture has a wound communicating with the fracture.'},
-{g:'PART I · TRUE OR FALSE',t:1,q:'A strain is overstretching or tearing of muscles or tendons, for example during heavy lifting.',o:['True','False'],a:0,e:'A strain affects muscle or tendon; a sprain affects a ligament.'},
-{g:'PART II · CASE 1 · Q1',q:'Why do you give first aid to the injured woman with massive bleeding?',o:['Preserve life','Reduce worsening complications','Facilitate recovery','All of the above'],a:3,e:'All three are key aims of first aid: preserve life, prevent deterioration, and promote recovery.'},
-{g:'PART II · CASE 1 · Q2',q:'Which action is the best immediate priority for the patient with massive bleeding?',o:['Give food','Control the bleeding','Recommend she return home','Give pain medication'],a:1,e:'Apply firm direct pressure and get emergency help. Use a tourniquet for life-threatening limb bleeding if trained and indicated.'},
-{g:'PART II · CASE 1 · Q3',q:'Which type of shock is she most likely to develop after massive blood loss?',o:['Cardiogenic shock','Anaphylactic shock','Hypovolemic shock','Neurogenic shock'],a:2,e:'Hypovolemic shock occurs when severe blood or fluid loss reduces circulating blood volume.'},
-{g:'PART II · CASE 1 · Q4',q:'If she becomes irritable, dizzy, and confused, which listed vital sign can you check immediately?',o:['Pulse rate','Temperature','Pain','None of these'],a:0,e:'Pulse rate is a vital sign and may become rapid in shock. Do not delay bleeding control or emergency care.'},
-{g:'PART II · CASE 1 · Q5',q:'If she is unresponsive and has no pulse and no normal breathing, what should you do immediately?',o:['Give fluids by mouth','Give medication','Start CPR and activate emergency response','Only transfer the patient'],a:2,e:'Activate emergency help, obtain an AED if available, and start CPR immediately.'},
-{g:'PART II · CASE 1 · Q6',q:'Which action helps open the airway when spinal injury is not suspected?',o:['Mouth-to-mouth breathing first','Chest compressions before assessing','Head tilt–chin lift','Manually sweep the mouth'],a:2,e:'Head tilt–chin lift opens the airway when trauma is not suspected. With suspected spinal injury, a trained rescuer may try jaw thrust while minimizing neck movement; opening the airway remains essential.'},
-{g:'PART II · CASE 1 · Q7',q:'For an adult receiving conventional CPR, what is the standard compression-to-rescue-breath ratio?',o:['15:2','3:1','30:3','30:2'],a:3,e:'For adult CPR, use 30 compressions followed by 2 breaths when trained and able to provide breaths.'},
-{g:'PART II · FRACTURE',q:'A 24-year-old man has a lower right-leg fracture. What is the first-aid priority before definitive treatment?',o:['Immobilize the injured leg','Perform surgery','Give antibiotics','Begin physiotherapy'],a:0,e:'Support and immobilize the limb in the position found, check circulation beyond the injury, and arrange urgent care. Do not attempt to straighten it.'},
-{g:'PART II · CASE 2 · Q9',q:'After a fall where spinal injury is possible, which statement about opening the airway is most accurate?',o:['Always use head lift and chin tilt','Use head tilt–chin lift in every case','A trained rescuer may use jaw thrust while minimizing neck movement','Point the chin down and head up'],a:2,e:'A trained rescuer may try jaw thrust. If it does not open the airway, use head tilt–chin lift because opening the airway is essential.'},
-{g:'PART II · CASE 2 · Q10',q:'Which is NOT a recognized complication of chest compressions during CPR?',o:['Rib fractures','Flail chest','Internal organ injury','Diarrhea'],a:3,e:'Rib or chest injuries and rarely internal injury can occur during CPR. Diarrhea is not a typical mechanical complication.'},
-{g:'PART II · CASE 2 · Q11',q:'A decrease in blood pressure is called:',o:['Hypotension','Hypertension','Hypovolemia','All of the above'],a:0,e:'Hypotension means low blood pressure. Hypovolemia means reduced circulating blood volume and can cause hypotension.'},
-{g:'PART II · CASE 2 · Q12',q:'The term tachycardia refers to:',o:['High respiratory rate','High heart/pulse rate','Low respiratory rate','Low pulse rate'],a:1,e:'Tachycardia means an abnormally fast heart rate. Tachypnea means an abnormally fast respiratory rate.'},
-{g:'PART II · JOINT INJURY',q:'A 59-year-old woman falls and the bones at her knee joint appear displaced. What is the likely diagnosis?',o:['Sprain','Strain','Dislocation','Fracture'],a:2,e:'A dislocation is displacement of the bones forming a joint. Do not attempt to put it back in place.'},
-{g:'PART II · CASE 3 · Q14',q:'A woman has painful burns with edema and blisters involving the epidermis and part of the dermis. What is the burn depth?',o:['First-degree burn','Second-degree (partial-thickness) burn','Third-degree burn','Fourth-degree burn'],a:1,e:'Blisters and damage to the epidermis plus part of the dermis indicate a partial-thickness, commonly called second-degree, burn.'},
-{g:'PART II · CASE 3 · Q15',q:'The burned areas are the right arm, right leg, and right half of the anterior chest. Using the exam’s apparent Rule of Nines estimate, what is the total body surface area burned?',o:['33%','31.5%','40%','45%'],a:1,e:'The apparent estimate is right arm 9% + right leg 18% + half of the anterior chest about 4.5% = 31.5%. Exact estimates depend on the area actually burned.'},
-{g:'PART II · CASE 3 · Q16',q:'Which is the appropriate first-aid approach for a thermal burn?',o:['Avoid all wet cooling','Immediately break the blisters','Cool with cool running water and cover loosely with a clean non-stick dressing','Apply caffeine powder'],a:2,e:'Cool a thermal burn with cool running water for about 20 minutes as soon as possible. Do not use ice, powders, oils, or break blisters.'},
-{g:'PART II · CASE 3 · Q17',q:'Which type of shock can develop after a severe burn due to fluid loss?',o:['Neurogenic shock','Hypovolemic shock','Cardiogenic shock','Spinal shock'],a:1,e:'Severe burns can cause major fluid shifts and loss, leading to hypovolemic shock.'},
-{g:'PART II · POISONING',q:'A conscious patient swallowed kerosene 30 minutes ago. Which first-aid action is safest?',o:['Induce vomiting','Give water to relieve stomach pain','Give milk to relieve stomach pain','Do not induce vomiting or give food/drink; get urgent poison or emergency advice'],a:3,e:'Kerosene can enter the lungs if vomited and cause serious injury. Do not induce vomiting or give anything by mouth unless poison specialists direct you.'},
-{g:'PART II · RESPIRATION',q:'Which feature normally occurs during exhalation (breathing out) at rest?',o:['Intercostal muscles relax','Ribs lift upward','The chest expands','The diaphragm contracts'],a:0,e:'Quiet exhalation is usually passive: the diaphragm and external intercostal muscles relax, chest volume decreases, and air flows out.'},
-{g:'PART II · RESPIRATORY FAILURE',q:'Which can cause respiratory failure in an injured child?',o:['The tongue falling back and obstructing the airway','Massive bleeding contributing to shock','Neck trauma affecting the airway','All of the above'],a:3,e:'Airway obstruction, trauma, and severe bleeding with shock can all threaten oxygen delivery and breathing.'},
-{g:'PART II · EYE INJURY',q:'A child has a sharp object penetrating the eye. Which statement is FALSE about first aid?',o:['Do not try to remove the object','Do not press or wash the injured eye','Loosely cover both eyes to reduce eye movement, if possible without pressure','Secure the object without pressing on the eye and seek emergency care'],a:1,e:'Do not remove the object or press on the eye. Stabilize it with a protective shield and seek emergency care. Do not wash a penetrating injury.'},
-{g:'PART II · EAR INJURY',q:'A road-traffic injury causes a suspected ruptured eardrum with skull fracture and possible cerebrospinal fluid leakage. What is the correct first-aid approach?',o:['Clean inside the ear','Stop the fluid from coming out','Allow fluid to drain and loosely cover the ear without blocking it','Turn the injured person onto the injured side'],a:2,e:'Do not plug, clean, or try to stop possible cerebrospinal fluid leakage. Let it drain, cover loosely, minimize movement, and arrange emergency care.'},
-{g:'PART II · FOREIGN BODY IN EYE',q:'If you feel burning and suspect a loose particle in your eye, what is the safest first step?',o:['Rub the eye','Use a toothpick','Use any available instrument','Rinse gently with clean running water if no object is embedded'],a:3,e:'Do not rub or use instruments. Gentle irrigation may help a loose surface particle. If an object is embedded or vision changes, protect the eye and seek urgent care.'},
-{g:'PART II · DRESSINGS',q:'Which injuries commonly require a large bulk of dressing to pad and support the injured area?',o:['Fractures of the femur and humerus','Fractures of the forearm only','Fractures of the ankle and foot only','Fractures of the radius and ulna only'],a:0,e:'Large bones such as the femur and humerus may need substantial padding and support while immobilized. Obtain urgent medical care.'},
-{g:'PART II · HEAD INJURY',q:'A small open wound on the scalp bleeds profusely. What is the specific injury called?',o:['Scalp injury','Skull injury','Brain injury','Skull fracture'],a:0,e:'The scalp has a rich blood supply, so even a small scalp wound may bleed heavily. Avoid pressing directly over a suspected skull fracture or embedded object.'}
-];
-
-const $=id=>document.getElementById(id);
-let index=0,choice=null,checked=false,answers={};
-function start(){
- index=0;choice=null;checked=false;answers={};
- $('hero').classList.add('hidden');$('library').classList.add('hidden');$('results').classList.add('hidden');$('quiz').classList.remove('hidden');
- render();window.scrollTo(0,0);
-}
-function render(){
- const q=questions[index];choice=null;checked=false;
- $('count').textContent=`QUESTION ${String(index+1).padStart(2,'0')} / ${questions.length}`;
- $('percent').textContent=`${Math.round(index/questions.length*100)}% COMPLETE`;
- $('fill').style.width=`${index/questions.length*100}%`;
- $('section').textContent=q.g;$('question').textContent=q.q;
- $('hint').textContent=q.t?'Choose True or False, then check your answer.':'Choose one answer, then check your answer.';
- $('answers').replaceChildren();
- q.o.forEach((txt,i)=>{
-  const b=document.createElement('button');b.className='option';b.type='button';
-  const letter=document.createElement('span');letter.className='letter';letter.textContent=String.fromCharCode(65+i);
-  const text=document.createElement('span');text.textContent=txt;b.append(letter,text);
-  b.onclick=()=>{if(checked)return;choice=i;[...$('answers').children].forEach((el,j)=>el.classList.toggle('selected',j===i));$('next').disabled=false;};
-  $('answers').append(b);
- });
- $('feedback').className='feedback hidden';$('next').disabled=true;$('next').textContent='Check answer →';$('skip').textContent='Skip for now';
-}
-function check(){
- const q=questions[index];checked=true;answers[index]=choice;
- const correct=choice===q.a;
- [...$('answers').children].forEach((b,i)=>{b.disabled=true;if(i===q.a)b.classList.add('correct');else if(i===choice)b.classList.add('wrong');});
- $('feedback').className='feedback'+(correct?'':' wrong');
- $('feedback-title').textContent=correct?'Correct. Well done.':'Not quite — learn from it.';
- $('feedback-answer').textContent=correct?`Your answer: ${q.o[choice]}`:`Correct answer: ${q.o[q.a]}`;
- $('explanation').textContent=q.e;
- $('next').textContent=index===questions.length-1?'See results →':'Next question →';
- $('fill').style.width=`${(index+1)/questions.length*100}%`;
- $('percent').textContent=`${Math.round((index+1)/questions.length*100)}% COMPLETE`;
- $('skip').textContent='Continue';
-}
-function next(){
- if(!checked){if(choice!==null)check();return;}
- if(index<questions.length-1){index++;render();window.scrollTo(0,0);}else results();
-}
-function skip(){
- if(checked){next();return;}
- answers[index]=null;
- if(index<questions.length-1){index++;render();}else results();
-}
-function results(){
- $('quiz').classList.add('hidden');$('results').classList.remove('hidden');
- const total=questions.reduce((n,q,i)=>n+(answers[i]===q.a?1:0),0);
- $('score').textContent=`${total} / ${questions.length}`;
- $('accuracy').textContent=`${Math.round(total/questions.length*100)}%`;
- $('review').classList.add('hidden');$('review').replaceChildren();$('review-toggle').textContent='Review answers';
- window.scrollTo(0,0);
-}
-function review(){
- const box=$('review');
- if(!box.classList.contains('hidden')){box.classList.add('hidden');$('review-toggle').textContent='Review answers';return;}
- box.replaceChildren();
- questions.forEach((q,i)=>{
-  const a=document.createElement('article');
-  const h=document.createElement('h3');h.textContent=`${i+1}. ${q.q}`;
-  const result=document.createElement('p');
-  result.textContent=answers[i]===q.a?`Correct · ${q.o[q.a]}`:`Correct answer · ${q.o[q.a]}${answers[i]===null||answers[i]===undefined?' · Skipped':` · Your answer: ${q.o[answers[i]]}`}`;
-  result.style.color=answers[i]===q.a?'#315e4d':'#a64f43';
-  const exp=document.createElement('p');exp.textContent=q.e;a.append(h,result,exp);box.append(a);
- });
- box.classList.remove('hidden');$('review-toggle').textContent='Hide review';box.scrollIntoView({behavior:'smooth'});
-}
-$('start').onclick=start;
-$('back').onclick=()=>{$('quiz').classList.add('hidden');$('hero').classList.remove('hidden');$('library').classList.remove('hidden');window.scrollTo(0,0);};
-$('next').onclick=next;$('skip').onclick=skip;$('restart').onclick=start;$('review-toggle').onclick=review;
-</script>
+<script src="app.js"></script>
 
 <script>
 (() => {
