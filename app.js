@@ -28,13 +28,31 @@ let choice = null;
 let checked = [];
 let answers = [];
 
-function showLibrary() {
+let quizHistoryActive = false;
+
+function displayLibrary() {
   $('hero').classList.remove('hidden');
   $('library').classList.remove('hidden');
   $('quiz').classList.add('hidden');
   $('results').classList.add('hidden');
   window.scrollTo(0, 0);
 }
+
+function showLibrary() {
+  if (quizHistoryActive) {
+    quizHistoryActive = false;
+    window.history.back();
+  }
+
+  displayLibrary();
+}
+
+window.addEventListener('popstate', () => {
+  if (quizHistoryActive) {
+    quizHistoryActive = false;
+    displayLibrary();
+  }
+});
 
 function renderLibrary() {
   const list = $('subjects-list');
@@ -110,6 +128,15 @@ async function start(subject) {
       ) {
         throw new Error(`Invalid question data at question ${i + 1}.`);
       }
+    }
+
+    if (!quizHistoryActive) {
+      window.history.pushState(
+        { nusphereView: 'quiz' },
+        '',
+        window.location.pathname + window.location.search
+      );
+      quizHistoryActive = true;
     }
 
     questions = data;
