@@ -134,7 +134,7 @@ async function start(subject) {
       window.history.pushState(
         { nusphereView: 'quiz' },
         '',
-        window.location.pathname + window.location.search
+        window.location.pathname + window.location.search + '#quiz'
       );
       quizHistoryActive = true;
     }
