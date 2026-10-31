@@ -50,6 +50,13 @@ const library = [
             ready: true,
             collections: [
               {
+                name: 'RENAL PHYSIOLOGY RN',
+                subjectName: 'Physiology II',
+                description: 'Renal (Kidney) Physiology — 40 questions.',
+                file: 'subjects/year-2/semester-1/physiology-ii/renal-physiology-rn/questions.json',
+                count: 40
+              },
+              {
                 name: 'NBB GIT RN',
                 subjectName: 'Physiology II',
                 description: 'Physiology of the Digestive System.',

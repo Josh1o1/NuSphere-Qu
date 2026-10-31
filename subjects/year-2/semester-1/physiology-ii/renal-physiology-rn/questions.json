@@ -1,0 +1,242 @@
+[
+  {
+    "q": "Which of the following is listed as a homeostatic (regulatory) function of the kidney?",
+    "o": ["Production of erythropoietin only", "Regulation of H₂O and electrolyte balance", "Gluconeogenesis exclusively", "Excretion of drugs only"],
+    "a": 1,
+    "e": "The kidney regulates water and electrolyte balance, acid-base balance, and arterial blood pressure. Erythropoietin production and gluconeogenesis are endocrine/metabolic functions, while drug removal is an excretory function."
+  },
+  {
+    "q": "Which hormone/enzyme is produced by the kidney as part of its endocrine function?",
+    "o": ["Insulin", "Renin", "Antidiuretic hormone (ADH)", "Atrial natriuretic peptide"],
+    "a": 1,
+    "e": "The kidney produces renin, erythropoietin, and vitamin D₃. Insulin is produced by the pancreas, ADH by the hypothalamus and released by the posterior pituitary, and ANP by the heart."
+  },
+  {
+    "q": "Approximately what percentage of cardiac output do the two kidneys receive at rest?",
+    "o": ["5%", "10%", "~20–22%", "50%"],
+    "a": 2,
+    "e": "The two kidneys receive approximately 20–22% of cardiac output at rest, around 1,100 ml/min."
+  },
+  {
+    "q": "Combined weight of both adult kidneys is approximately:",
+    "o": ["100 g", "200 g", "~300 g", "500 g"],
+    "a": 2,
+    "e": "Both adult kidneys together weigh approximately 300 g."
+  },
+  {
+    "q": "What is the approximate number of nephrons in one adult kidney?",
+    "o": ["100,000–200,000", "800,000–1,000,000", "2–3 million", "5 million"],
+    "a": 1,
+    "e": "One adult kidney contains approximately 800,000 to 1,000,000 nephrons. Both kidneys contain about 2 million."
+  },
+  {
+    "q": "Which segment of the nephron is the primary site of filtration?",
+    "o": ["Proximal convoluted tubule", "Loop of Henle", "Glomerulus (capillary tuft)", "Collecting duct"],
+    "a": 2,
+    "e": "Filtration occurs in the glomerulus. The proximal tubule is the major site of reabsorption, the loop of Henle helps establish the concentration gradient, and the collecting duct helps regulate final urine concentration."
+  },
+  {
+    "q": "Which type of nephron makes up approximately 85% of nephrons in humans and has a short loop of Henle?",
+    "o": ["Juxtamedullary nephrons", "Cortical nephrons", "Medullary nephrons", "Intermediate nephrons"],
+    "a": 1,
+    "e": "Cortical nephrons make up approximately 85% of nephrons. They have short loops of Henle that extend only into the outer medulla."
+  },
+  {
+    "q": "Juxtamedullary nephrons are especially important for:",
+    "o": ["Filtration of plasma proteins", "Concentration of urine", "Production of erythropoietin", "Primary reabsorption of glucose"],
+    "a": 1,
+    "e": "Juxtamedullary nephrons have long loops of Henle and are important for concentrating urine."
+  },
+  {
+    "q": "Why is the presence of two capillary beds in series (glomerular and peritubular) important?",
+    "o": ["It allows only filtration to occur", "It promotes both efficient filtration and reabsorption", "It prevents any reabsorption", "It equalizes pressures throughout the kidney"],
+    "a": 1,
+    "e": "The two capillary beds promote filtration and reabsorption. High pressure in glomerular capillaries favors filtration, while low pressure in peritubular capillaries favors reabsorption."
+  },
+  {
+    "q": "Approximate hydrostatic pressure in the glomerular capillaries is:",
+    "o": ["13 mm Hg", "18 mm Hg", "32 mm Hg", "60 mm Hg"],
+    "a": 3,
+    "e": "Glomerular hydrostatic pressure is approximately 60 mm Hg and favors filtration. Peritubular pressure is about 13 mm Hg."
+  },
+  {
+    "q": "The three major processes involved in urine formation are:",
+    "o": ["Filtration, secretion, and excretion only", "Glomerular filtration, tubular reabsorption, and tubular secretion", "Concentration, dilution, and excretion", "Filtration, diffusion, and osmosis"],
+    "a": 1,
+    "e": "Urine formation involves glomerular filtration, tubular reabsorption, and tubular secretion. Excretion = filtration − reabsorption + secretion."
+  },
+  {
+    "q": "Calculate the net filtration pressure (NFP) given: glomerular hydrostatic pressure = 60 mm Hg, glomerular capillary colloid osmotic pressure = 32 mm Hg, and Bowman's capsule hydrostatic pressure = 18 mm Hg.",
+    "o": ["60 mm Hg", "42 mm Hg", "10 mm Hg", "28 mm Hg"],
+    "a": 2,
+    "e": "NFP = 60 − (32 + 18) = 10 mm Hg. The glomerular hydrostatic pressure favors filtration, while the other two pressures oppose it."
+  },
+  {
+    "q": "Which force favors glomerular filtration?",
+    "o": ["Bowman's capsule hydrostatic pressure", "Glomerular capillary colloid osmotic pressure", "Glomerular hydrostatic pressure", "Plasma protein concentration in Bowman's space"],
+    "a": 2,
+    "e": "Glomerular hydrostatic pressure favors filtration. Bowman's capsule hydrostatic pressure and glomerular capillary colloid osmotic pressure oppose filtration."
+  },
+  {
+    "q": "Constriction of the afferent arteriole primarily causes:",
+    "o": ["Increased GFR", "Decreased GFR", "No change in GFR", "Increased renal blood flow"],
+    "a": 1,
+    "e": "Afferent arteriolar constriction reduces blood flow into the glomerulus, lowers glomerular pressure, and decreases GFR and renal blood flow."
+  },
+  {
+    "q": "Moderate constriction of the efferent arteriole tends to:",
+    "o": ["Decrease GFR and increase RBF", "Increase GFR but decrease RBF", "Decrease both GFR and RBF", "Increase both GFR and RBF"],
+    "a": 1,
+    "e": "Moderate efferent arteriolar constriction increases glomerular pressure and tends to increase GFR, while decreasing renal blood flow."
+  },
+  {
+    "q": "Increased sympathetic stimulation of the kidney typically:",
+    "o": ["Increases GFR", "Decreases GFR", "Has no effect on GFR", "Increases both GFR and RBF"],
+    "a": 1,
+    "e": "Increased sympathetic stimulation constricts renal blood vessels, reducing renal blood flow and typically decreasing GFR."
+  },
+  {
+    "q": "Autoregulation of the kidney maintains relatively constant GFR and RBF over an arterial pressure range of approximately:",
+    "o": ["40–80 mm Hg", "80–200 mm Hg", "100–300 mm Hg", "50–100 mm Hg"],
+    "a": 1,
+    "e": "Renal autoregulation maintains relatively stable GFR over an arterial pressure range of approximately 80–200 mm Hg."
+  },
+  {
+    "q": "Which mechanism of autoregulation involves stress relaxation of the afferent arteriole in response to increased arterial blood pressure?",
+    "o": ["Tubuloglomerular feedback", "Myogenic mechanism", "Renin-angiotensin system only", "Sympathetic nervous system"],
+    "a": 1,
+    "e": "The myogenic mechanism involves the response of afferent arteriolar smooth muscle to changes in pressure, helping stabilize renal blood flow and GFR."
+  },
+  {
+    "q": "Tubuloglomerular feedback primarily involves sensing of:",
+    "o": ["Potassium concentration by principal cells", "Sodium level in the filtrate by macula densa cells of the JGA", "Glucose concentration in the proximal tubule", "ADH levels in the collecting duct"],
+    "a": 1,
+    "e": "Macula densa cells in the juxtaglomerular apparatus (JGA) sense changes in sodium chloride delivery in the tubular fluid and help regulate GFR."
+  },
+  {
+    "q": "Approximately what percentage of the filtered load is reabsorbed in the proximal tubule?",
+    "o": ["15–20%", "~65%", "90%", "1–2%"],
+    "a": 1,
+    "e": "The proximal tubule reabsorbs approximately 65% of the filtered load, including water, electrolytes, glucose, and amino acids."
+  },
+  {
+    "q": "The most important ion whose active transport drives secondary reabsorption of many other substances in the proximal tubule is:",
+    "o": ["Potassium", "Calcium", "Sodium", "Bicarbonate"],
+    "a": 2,
+    "e": "Active sodium reabsorption establishes gradients that support the reabsorption of substances such as glucose, amino acids, chloride, and water."
+  },
+  {
+    "q": "In the descending limb of the loop of Henle:",
+    "o": ["The epithelium is impermeable to water", "Water escapes to the interstitium, concentrating tubular fluid up to approximately 1200 mOsm/L", "Active transport of NaCl occurs extensively", "The fluid becomes hypo-osmolar"],
+    "a": 1,
+    "e": "The descending limb is permeable to water. Water leaves the tubule, making the tubular fluid more concentrated as it descends into the medulla."
+  },
+  {
+    "q": "The ascending limb of the loop of Henle is:",
+    "o": ["Highly permeable to water", "Impermeable to water but permeable to solutes (Na, Cl, K)", "The main site of ADH action", "The primary site of glucose reabsorption"],
+    "a": 1,
+    "e": "The ascending limb is impermeable to water and allows solute reabsorption. This helps dilute the tubular fluid and establish the medullary osmotic gradient."
+  },
+  {
+    "q": "Approximately what fraction of the original filtrate is finally excreted as urine under normal conditions?",
+    "o": ["20%", "10%", "1–2% (about 1–2 liters)", "50%"],
+    "a": 2,
+    "e": "Only about 1–2% of the original filtrate is normally excreted as urine. ADH helps regulate final urine concentration and volume."
+  },
+  {
+    "q": "The transport maximum (Tm) for glucose is given as approximately:",
+    "o": ["100 mg/min", "220 mg/min", "320 mg/min", "500 mg/min"],
+    "a": 2,
+    "e": "The glucose transport maximum is approximately 320 mg/min. When the filtered tubular load exceeds this capacity, some glucose is excreted in urine."
+  },
+  {
+    "q": "The renal threshold plasma concentration for glucose (at which glucose begins to appear in urine) is approximately:",
+    "o": ["100 mg/100 ml", "180–220 mg/100 ml", "320 mg/100 ml", "500 mg/100 ml"],
+    "a": 1,
+    "e": "The lecture slides give a renal threshold of approximately 220 mg/100 ml. Above the threshold, glucose may begin to appear in urine."
+  },
+  {
+    "q": "Which ions are actively secreted mainly from the distal tubule?",
+    "o": ["Na⁺ and Cl⁻", "K⁺ and H⁺", "Glucose and amino acids", "Ca²⁺ and Mg²⁺"],
+    "a": 1,
+    "e": "Potassium and hydrogen ions are secreted mainly in the distal nephron. Other secreted substances include creatinine, ammonia, uric acid, and some drugs."
+  },
+  {
+    "q": "The net result of the counter-current multiplier system is:",
+    "o": ["Iso-osmotic interstitium throughout the medulla", "Production of hyper-osmotic interstitial fluid in the medulla", "Complete impermeability of the collecting duct to water", "Active secretion of water into the descending limb"],
+    "a": 1,
+    "e": "The counter-current multiplier creates a hyperosmotic medullary interstitium. This gradient allows osmotic water reabsorption from the collecting duct when it is permeable to water."
+  },
+  {
+    "q": "Loop diuretics such as furosemide (Lasix) act by:",
+    "o": ["Increasing water permeability of the descending limb", "Inhibiting solute transport in the ascending limb of the loop of Henle", "Stimulating ADH release", "Blocking sodium channels in the collecting duct"],
+    "a": 1,
+    "e": "Loop diuretics inhibit sodium-potassium-chloride transport in the thick ascending limb, reducing solute reabsorption and weakening the medullary concentration gradient."
+  },
+  {
+    "q": "The counter-current exchange in the vasa recta helps to:",
+    "o": ["Destroy the medullary osmotic gradient", "Maintain hypertonicity in the medullary interstitium", "Increase glomerular filtration rate", "Promote active secretion of urea into the cortex"],
+    "a": 1,
+    "e": "The vasa recta counter-current exchange helps preserve the medullary osmotic gradient while supplying blood to the medulla."
+  },
+  {
+    "q": "Clearance of a substance is defined as:",
+    "o": ["The volume of urine produced per minute", "The rate at which the kidneys remove a substance from the plasma", "The concentration of the substance in urine only", "The filtered load of the substance"],
+    "a": 1,
+    "e": "Clearance is the volume of plasma from which a substance is completely removed per unit time."
+  },
+  {
+    "q": "The clearance (Cx) of a substance X is calculated as:",
+    "o": ["Cx = Px × Vx / Ux", "Cx = Ux × Vx / Px", "Cx = Ux / (Px × Vx)", "Cx = Px / (Ux × Vx)"],
+    "a": 1,
+    "e": "Clearance = (urine concentration × urine flow rate) / plasma concentration. Cx = (Ux × V) / Px, usually expressed in ml/min."
+  },
+  {
+    "q": "For substances such as inulin (and approximately creatinine) that are neither reabsorbed nor secreted, clearance is essentially equal to:",
+    "o": ["Renal plasma flow", "Glomerular filtration rate (GFR)", "Tubular maximum", "Urine flow rate"],
+    "a": 1,
+    "e": "For a substance that is freely filtered but neither reabsorbed nor secreted, its clearance equals GFR. Creatinine clearance approximates GFR."
+  },
+  {
+    "q": "In clinical practice, which substance's clearance is commonly used to estimate GFR?",
+    "o": ["Inulin only", "Creatinine", "Glucose", "Urea exclusively"],
+    "a": 1,
+    "e": "Creatinine clearance is commonly used to estimate GFR in clinical practice. Creatinine is freely filtered and slightly secreted."
+  },
+  {
+    "q": "Why is inulin considered an ideal substance for precise measurement of GFR?",
+    "o": ["It is actively secreted by the tubules", "It is neither reabsorbed nor secreted, so its excretion rate is directly proportional to filtration rate", "It is completely reabsorbed", "It is produced endogenously in large amounts"],
+    "a": 1,
+    "e": "Inulin is freely filtered and neither reabsorbed nor secreted. Therefore, its excretion rate directly reflects the filtration rate."
+  },
+  {
+    "q": "Which of the following is an excretory function of the kidney?",
+    "o": ["Regulation of acid-base balance", "Production of vitamin D₃", "Excretion of metabolic wastes such as creatinine, urea, and uric acid", "Autoregulation of blood pressure via myogenic mechanism"],
+    "a": 2,
+    "e": "The kidneys excrete metabolic wastes such as creatinine, urea, uric acid, drugs, and hormones. Acid-base regulation is homeostatic, while vitamin D₃ production is an endocrine function."
+  },
+  {
+    "q": "The site of major reabsorption of filtrate is the:",
+    "o": ["Glomerulus", "Proximal convoluted tubule", "Thin descending limb only", "Collecting duct exclusively"],
+    "a": 1,
+    "e": "The proximal convoluted tubule is the major site of reabsorption, handling approximately 65% of the filtered load."
+  },
+  {
+    "q": "Bacterial infections can decrease GFR primarily by:",
+    "o": ["Increasing glomerular hydrostatic pressure", "Decreasing the surface area of the glomerular capillaries via mesangial cell effects", "Dilating the afferent arteriole", "Decreasing plasma protein concentration"],
+    "a": 1,
+    "e": "Mesangial cells can alter the available glomerular capillary surface area. A decrease in this surface area reduces the filtration coefficient and can decrease GFR."
+  },
+  {
+    "q": "The hyperosmotic medullary interstitium created by the counter-current multiplier is especially useful for:",
+    "o": ["Active secretion of potassium", "Osmotic reabsorption of water mainly from the collecting duct under the influence of ADH", "Filtration of large proteins", "Production of dilute urine only"],
+    "a": 1,
+    "e": "The hyperosmotic medullary interstitium promotes water reabsorption from the collecting duct when ADH increases its water permeability."
+  },
+  {
+    "q": "If the tubular load of glucose is 430 mg/min and the Tm for glucose is 320 mg/min, approximately how much glucose will appear in the urine per minute?",
+    "o": ["None", "110 mg/min", "320 mg/min", "430 mg/min"],
+    "a": 1,
+    "e": "Glucose excreted = tubular load − Tm = 430 − 320 = 110 mg/min."
+  }
+]
