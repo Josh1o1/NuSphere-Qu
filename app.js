@@ -1,23 +1,96 @@
 const $ = id => document.getElementById(id);
 
-const subjects = [
+const library = [
   {
-    id: 'first-aid',
-    name: 'First Aid',
-    description: 'Emergency care, CPR, injuries, burns and more.',
-    file: 'subjects/first-aid.json',
-    count: 35,
-    icon: '＋',
-    ready: true
+    type: 'folder',
+    id: 'year-1',
+    name: 'Year 1',
+    description: 'First-year nursing study materials.',
+    icon: 'Ⅰ',
+    children: [
+      {
+        type: 'subject',
+        id: 'first-aid',
+        name: 'First Aid',
+        description: 'Emergency care, CPR, injuries, burns and more.',
+        icon: '＋',
+        ready: true,
+        collections: [
+          {
+            name: 'First Aid',
+            subjectName: 'First Aid',
+            description: 'Emergency care and first-aid practice.',
+            file: 'subjects/year-1/first-aid/questions.json',
+            count: 35
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'physiology-ii',
-    name: 'Physiology II',
-    description: 'Physiology of the digestive system.',
-    file: 'subjects/physiology-ii.json',
-    count: 30,
+    type: 'folder',
+    id: 'year-2',
+    name: 'Year 2',
+    description: 'Second-year nursing study materials.',
     icon: 'Ⅱ',
-    ready: true
+    children: [
+      {
+        type: 'folder',
+        id: 'semester-1',
+        name: 'First Semester',
+        description: 'Second-year, first-semester subjects.',
+        icon: 'Ⅰ',
+        children: [
+          {
+            type: 'subject',
+            id: 'physiology-ii',
+            name: 'Physiology II',
+            description: 'Understand the functions of the human body.',
+            icon: 'Ⅱ',
+            ready: true,
+            collections: [
+              {
+                name: 'NBB GIT RN',
+                subjectName: 'Physiology II',
+                description: 'Physiology of the Digestive System.',
+                file: 'subjects/year-2/semester-1/physiology-ii/nbb-git-rn/questions.json',
+                count: 30
+              }
+            ]
+          },
+          ...[
+            'Environment Health',
+            'Parasitology',
+            'Fundamental II',
+            'Entrepreneurship',
+            'ORT',
+            'Microbiology II',
+            'Biochemistry II',
+            'Pharmacology',
+            'Inclusiveness',
+            'Pathophysiology',
+            'Anatomy II'
+          ].map((name, index) => ({
+            type: 'subject',
+            id: `year-2-subject-${index + 1}`,
+            name,
+            description: 'Study materials and interactive quizzes will be added here.',
+            icon: 'Ⅱ',
+            ready: false,
+            collections: []
+          }))
+        ]
+      },
+      {
+        type: 'folder',
+        id: 'semester-2',
+        name: 'Second Semester',
+        description: 'Second-year, second-semester subjects.',
+        icon: 'Ⅱ',
+        comingSoon: true,
+        children: []
+      }
+    ]
   }
 ];
 
@@ -28,92 +101,199 @@ let choice = null;
 let checked = [];
 let answers = [];
 
-let quizHistoryActive = false;
+let currentCollection = null;
+const viewStack = [{ type: 'root' }];
 
-function displayLibrary() {
-  $('hero').classList.remove('hidden');
-  $('library').classList.remove('hidden');
-  $('quiz').classList.add('hidden');
-  $('results').classList.add('hidden');
-  window.scrollTo(0, 0);
+function pushView(view, fragment) {
+  viewStack.push(view);
+  window.history.pushState(
+    { nusphereView: fragment },
+    '',
+    window.location.pathname + window.location.search + '#' + fragment
+  );
 }
 
-function showLibrary() {
-  if (quizHistoryActive) {
-    quizHistoryActive = false;
+function goBack() {
+  if (viewStack.length > 1) {
     window.history.back();
   }
+}
 
-  displayLibrary();
+function displayLibrary() {
+  renderLibrary();
 }
 
 window.addEventListener('popstate', () => {
-  if (quizHistoryActive) {
-    quizHistoryActive = false;
-    displayLibrary();
-  }
+  if (viewStack.length > 1) viewStack.pop();
+  renderLibrary();
 });
 
+
+function showLibrary() {
+  goBack();
+}
+
 function renderLibrary() {
+  const view = viewStack[viewStack.length - 1];
   const list = $('subjects-list');
+  const heading = document.querySelector('#library .section-head h2');
+  const labels = document.querySelectorAll('#library .section-head .small-label');
+  const future = document.querySelector('#library .future');
+  const librarySection = $('library');
+
+  $('hero').classList.toggle('hidden', view.type !== 'root');
+  librarySection.classList.remove('hidden');
+  $('quiz').classList.add('hidden');
+  $('results').classList.add('hidden');
+
+  let items = [];
+  let title = 'Choose a year';
+
+  if (view.type === 'root') {
+    items = library;
+    title = 'Choose a year';
+  } else if (view.type === 'folder') {
+    items = view.folder.children || [];
+    title = view.folder.name;
+  } else if (view.type === 'subject') {
+    items = view.subject.collections || [];
+    title = view.subject.name;
+  }
+
+  heading.textContent = title;
+  labels[0].textContent = view.type === 'root' ? 'YOUR LIBRARY' : 'STUDY LIBRARY';
+  labels[1].textContent =
+    `${String(items.length).padStart(2, '0')} ${view.type === 'subject' ? 'COLLECTIONS' : 'ITEMS'}`;
+
+  let back = $('library-back');
+  if (!back) {
+    back = document.createElement('button');
+    back.id = 'library-back';
+    back.className = 'back library-back';
+    back.type = 'button';
+    back.addEventListener('click', goBack);
+    librarySection.insertBefore(back, librarySection.firstChild);
+  }
+
+  back.classList.toggle('hidden', view.type === 'root');
+  if (view.type !== 'root') {
+    const parent = viewStack[viewStack.length - 2];
+    const parentName = parent.type === 'root'
+      ? 'Library'
+      : parent.type === 'folder'
+        ? parent.folder.name
+        : parent.subject.name;
+    back.textContent = `← ${parentName}`;
+  }
+
+  future.textContent = view.type === 'subject'
+    ? 'More quiz collections from additional lecture materials will be added here.'
+    : view.type === 'root'
+      ? 'Choose your study year to explore its subjects and learning materials.'
+      : 'More subjects and learning materials will be added as we progress.';
+
   list.replaceChildren();
 
-  subjects.forEach(subject => {
+  function addCard(item, options = {}) {
     const button = document.createElement('button');
     button.className = 'subject';
     button.type = 'button';
-    button.disabled = !subject.ready;
+    button.disabled = Boolean(options.disabled);
 
     const icon = document.createElement('div');
     icon.className = 'subject-icon';
-    icon.textContent = subject.icon;
+    icon.textContent = options.icon || item.icon || 'Ⅱ';
 
     const info = document.createElement('div');
     info.className = 'subject-info';
 
     const label = document.createElement('div');
     label.className = 'small-label';
-    label.textContent = `NURSING · ${subject.ready ? 'AVAILABLE' : 'COMING SOON'}`;
+    label.textContent = options.label || 'NURSING · AVAILABLE';
 
-    const title = document.createElement('h3');
-    title.textContent = subject.name;
+    const name = document.createElement('h3');
+    name.textContent = item.name;
 
     const description = document.createElement('p');
-    description.textContent = subject.description;
+    description.textContent = item.description || '';
 
     const meta = document.createElement('div');
     meta.className = 'meta';
-    meta.textContent = subject.ready
-      ? `${subject.count} questions · Interactive practice`
-      : `${subject.count} questions · Being prepared`;
+    meta.textContent = options.meta || '';
 
-    info.append(label, title, description, meta);
+    info.append(label, name, description, meta);
 
     const arrow = document.createElement('div');
     arrow.className = 'arrow';
-    arrow.textContent = subject.ready ? '↗' : '…';
+    arrow.textContent = options.disabled ? '…' : '↗';
 
     button.append(icon, info, arrow);
 
-    if (subject.ready) {
-      button.addEventListener('click', () => start(subject));
+    if (!options.disabled && options.onClick) {
+      button.addEventListener('click', options.onClick);
     }
 
     list.append(button);
-  });
+  }
+
+  for (const item of items) {
+    if (view.type === 'subject') {
+      addCard(item, {
+        label: 'QUIZ COLLECTION · AVAILABLE',
+        meta: `${item.count} questions · Interactive practice`,
+        icon: '▤',
+        onClick: () => start({
+          ...item,
+          subjectName: view.subject.name
+        })
+      });
+      continue;
+    }
+
+    if (item.type === 'folder') {
+      const disabled = Boolean(item.comingSoon);
+      addCard(item, {
+        label: disabled ? 'COMING SOON' : 'STUDY FOLDER',
+        meta: disabled ? 'Being prepared' : `${item.children.length} sections · Explore`,
+        disabled,
+        onClick: () => {
+          pushView({ type: 'folder', folder: item }, `folder-${item.id}`);
+          renderLibrary();
+        }
+      });
+      continue;
+    }
+
+    const disabled = !item.ready;
+    const collectionCount = item.collections.length;
+
+    addCard(item, {
+      label: disabled ? 'NURSING · COMING SOON' : 'NURSING · AVAILABLE',
+      meta: disabled
+        ? 'Study materials being prepared'
+        : `${collectionCount} quiz collection${collectionCount === 1 ? '' : 's'}`,
+      disabled,
+      onClick: () => {
+        pushView({ type: 'subject', subject: item }, `subject-${item.id}`);
+        renderLibrary();
+      }
+    });
+  }
+
+  window.scrollTo(0, 0);
 }
 
-async function start(subject) {
+async function start(collection) {
   try {
-    const response = await fetch(subject.file);
+    const response = await fetch(collection.file);
 
     if (!response.ok) {
-      throw new Error(`Could not load ${subject.file}`);
+      throw new Error(`Could not load ${collection.file}`);
     }
 
     const data = await response.json();
 
-    if (!Array.isArray(data) || data.length !== subject.count) {
+    if (!Array.isArray(data) || data.length !== collection.count) {
       throw new Error('The question file has an unexpected structure.');
     }
 
@@ -130,17 +310,13 @@ async function start(subject) {
       }
     }
 
-    if (!quizHistoryActive) {
-      window.history.pushState(
-        { nusphereView: 'quiz' },
-        '',
-        window.location.pathname + window.location.search + '#quiz'
-      );
-      quizHistoryActive = true;
+    if (viewStack[viewStack.length - 1].type !== 'quiz') {
+      pushView({ type: 'quiz', collection }, 'quiz');
     }
 
     questions = data;
-    currentSubject = subject;
+    currentSubject = { name: collection.subjectName };
+    currentCollection = collection;
     index = 0;
     answers = Array(questions.length).fill(null);
     checked = Array(questions.length).fill(false);
@@ -150,7 +326,7 @@ async function start(subject) {
     $('results').classList.add('hidden');
     $('quiz').classList.remove('hidden');
 
-    $('subject-heading').textContent = `${subject.name.toUpperCase()} · PRACTICE`;
+    $('subject-heading').textContent = `${collection.subjectName.toUpperCase()} · ${collection.name.toUpperCase()}`;
 
     render();
     window.scrollTo(0, 0);
@@ -393,7 +569,7 @@ $('previous').addEventListener('click', previous);
 $('next').addEventListener('click', next);
 $('skip').addEventListener('click', skip);
 $('back').addEventListener('click', showLibrary);
-$('restart').addEventListener('click', () => start(currentSubject));
+$('restart').addEventListener('click', () => start(currentCollection));
 $('review-toggle').addEventListener('click', review);
 
 renderLibrary();
