@@ -77,7 +77,23 @@ const library = [
             'Inclusiveness',
             'Pathophysiology',
             'Anatomy II'
-          ].map((name, index) => ({
+          ].map((name, index) => name === 'Microbiology II' ? ({
+            type: 'subject',
+            id: `year-2-subject-${index + 1}`,
+            name,
+            description: 'Medical Microbiology — 40 questions.',
+            icon: 'Ⅱ',
+            ready: true,
+            collections: [
+              {
+                name: 'Medical Microbiology 2026',
+                subjectName: 'Microbiology II',
+                description: 'Comprehensive Medical Microbiology MCQ Bank — 40 questions.',
+                file: 'subjects/year-2/semester-1/microbiology-ii/medical-microbiology-2026/questions.json',
+                count: 40
+              }
+            ]
+          }) : ({
             type: 'subject',
             id: `year-2-subject-${index + 1}`,
             name,
