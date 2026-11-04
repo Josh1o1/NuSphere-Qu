@@ -1,0 +1,442 @@
+[
+  {
+    "q": "Which statement best defines impairment?",
+    "o": [
+      "A disadvantage resulting from discrimination, prejudice and exclusion",
+      "Any loss or abnormality of physiological, psychological or anatomical structure or function",
+      "A limitation caused by barriers in information, communication and education",
+      "A condition that requires ongoing medical attention"
+    ],
+    "a": 1,
+    "e": "Impairment refers to an abnormality or absence of a body structure or function, including a body part that exists but does not work. A describes the social definition of disability. C describes environmental barriers emphasized by the social definition. D defines health impairment."
+  },
+  {
+    "q": "Which statement reflects the medical definition of disability?",
+    "o": [
+      "Functional limitations due to physical, intellectual or psychic impairment or health disorders",
+      "A consequence of discrimination, prejudice and exclusion",
+      "A result of shortcomings in the environment and organized activities of society",
+      "A condition that depends largely on context"
+    ],
+    "a": 0,
+    "e": "The medical definition locates disability in the person's functional limitation caused by an impairment or disorder. B and C reflect the social definition, which emphasizes discrimination and environmental shortcomings. D describes the context-dependent nature of the social definition."
+  },
+  {
+    "q": "A student who uses a wheelchair cannot attend lectures held on an upper floor with no ramp or lift, and the course materials are not available in accessible formats. Which perspective best explains why this student is disabled in this setting?",
+    "o": [
+      "Medical: the disability is solely a functional limitation within the person",
+      "Genetic: the disability stems from inherited gene abnormalities",
+      "Unknown: the cause cannot be determined",
+      "Social: disability results from environmental and organizational shortcomings that prevent equal participation"
+    ],
+    "a": 3,
+    "e": "The stairs and inaccessible learning materials prevent equal participation. This illustrates the social definition of disability and inaccessible environments. A ignores the barriers. B has no evidence in the scenario. C is incorrect because the barriers are identifiable."
+  },
+  {
+    "q": "Which list gives the four causes of disability presented in the chapter?",
+    "o": [
+      "Genetic, infectious, psychological, economic",
+      "Genetic, nutritional, religious, unknown",
+      "Genetic, environmental, unknown, inaccessible environments",
+      "Environmental, behavioral, cultural, unknown"
+    ],
+    "a": 2,
+    "e": "The four categories presented are genetic, environmental, unknown and inaccessible environments. A, B and D include categories that are not the four general categories listed in the chapter. Behavioral and cultural factors are discussed later as causes of emotional and behavioral disorders."
+  },
+  {
+    "q": "According to the chapter, which is the most common genetic condition?",
+    "o": [
+      "Spina bifida",
+      "Down syndrome",
+      "Marfan syndrome",
+      "Achondroplasia"
+    ],
+    "a": 1,
+    "e": "The chapter identifies Down syndrome as the most common genetic condition among those causing intellectual disability in children. Spina bifida is described as having an unknown cause. Marfan syndrome is genetic but is not identified as the most common. Achondroplasia is not described as the most common."
+  },
+  {
+    "q": "Which of the following is classified as a genetic rather than an environmental cause?",
+    "o": [
+      "Malnutrition in a pregnant mother",
+      "Rubella infection during pregnancy",
+      "Drowning or a fall in childhood",
+      "Abnormalities in genes and genetic inheritance"
+    ],
+    "a": 3,
+    "e": "Abnormalities in genes and genetic inheritance are genetic causes. Malnutrition during pregnancy and rubella exposure are environmental causes. Drowning, falls and automobile accidents are environmental unfortunate life events."
+  },
+  {
+    "q": "Childhood diseases such as whooping cough, measles and chicken pox may lead to which complications that cause disability?",
+    "o": [
+      "Meningitis and encephalitis",
+      "Muscular dystrophy and arthritis",
+      "Cleft lip and club foot",
+      "Dyslexia and dyscalculia"
+    ],
+    "a": 0,
+    "e": "The chapter states that these childhood diseases may lead to meningitis and encephalitis. Muscular dystrophy and arthritis are musculoskeletal conditions. Cleft lip and club foot are congenital conditions. Dyslexia and dyscalculia are specific learning disabilities."
+  },
+  {
+    "q": "In this chapter, visual impairment refers to vision loss that:",
+    "o": [
+      "Is always total and permanent",
+      "Affects only the eye and never the brain",
+      "Is not correctable with eyeglasses or contact lenses",
+      "Occurs only in older adults"
+    ],
+    "a": 2,
+    "e": "Visual impairment is vision loss that cannot be corrected with eyeglasses or contact lenses. It may be total or partial and can result from disease or disorder of the eye, optic nerve or brain. Low vision refers to moderately impaired vision. A is incorrect because loss may be partial. B ignores the optic nerve and brain. D incorrectly restricts it to older adults."
+  },
+  {
+    "q": "How does the chapter distinguish a person who is hard of hearing from one who is deaf?",
+    "o": [
+      "Hard of hearing people use sign language; deaf people use hearing aids",
+      "Hard of hearing people use residual hearing, usually with a hearing aid, as their primary way to acquire language; deaf people have difficulty understanding speech even with aids but can communicate in sign language",
+      "Hard of hearing people cannot hear at all; deaf people hear partially",
+      "There is no distinction in the chapter"
+    ],
+    "a": 1,
+    "e": "The distinction concerns whether hearing, usually with an aid, serves as the primary language channel. A reverses the described distinction. C also reverses the difference. D is incorrect because the chapter makes the distinction explicit."
+  },
+  {
+    "q": "Which of the following is NOT listed as a type of specific learning disability?",
+    "o": [
+      "Cluttering",
+      "Dysgraphia",
+      "Dyscalculia",
+      "Visual perceptual/visual motor deficit"
+    ],
+    "a": 0,
+    "e": "Cluttering is a fluency disorder under speech impairments. The listed learning disabilities include auditory processing disorder, dyscalculia, dysgraphia, dyslexia, language processing disorder, non-verbal learning disability and visual perceptual/visual motor deficit. B, C and D are listed learning disabilities."
+  },
+  {
+    "q": "A child passes a hearing test, since sounds are loud and clear enough, yet consistently cannot tell apart similar-sounding words. Which condition best fits?",
+    "o": [
+      "Dyscalculia",
+      "Hard of hearing",
+      "Dysgraphia",
+      "Auditory Processing Disorder (APD)"
+    ],
+    "a": 3,
+    "e": "In auditory processing disorder, sound travels through the ear, but the brain does not process or interpret differences between sounds in words correctly. Dyscalculia concerns numbers and mathematics. Hard of hearing involves reduced hearing, which the scenario excludes. Dysgraphia affects handwriting and fine motor skills."
+  },
+  {
+    "q": "A learner has poor comprehension of math symbols, struggles to memorize and organize numbers, and has difficulty telling time. This describes:",
+    "o": [
+      "Dysgraphia",
+      "Dyslexia",
+      "Dyscalculia",
+      "Language Processing Disorder"
+    ],
+    "a": 2,
+    "e": "Dyscalculia is difficulty understanding numbers and learning mathematics. Signs include trouble with mathematical symbols, number memory and organization, telling time and counting. Dysgraphia affects handwriting and written composition. Dyslexia affects reading and related language processing. Language processing disorder affects attaching meaning to sound groups in words, sentences and stories."
+  },
+  {
+    "q": "Which set of features is characteristic of dysgraphia?",
+    "o": [
+      "Illegible handwriting, inconsistent spacing, poor spatial planning on paper and poor spelling",
+      "Trouble interpreting facial expressions and body language",
+      "Difficulty attaching meaning to sound groups",
+      "Inability to learn numbers and tell time"
+    ],
+    "a": 0,
+    "e": "Dysgraphia affects handwriting and fine motor skills. It can also affect written composition and the ability to think and write at the same time. B describes non-verbal learning disability. C describes language processing disorder. D describes dyscalculia."
+  },
+  {
+    "q": "A student reads slowly, struggles to decode words, and has poor spelling and recall of what was read, but is strong in oral discussion. Which condition is most consistent with this profile, and how is it sometimes labeled?",
+    "o": [
+      "Dyscalculia, a visual-spatial disability",
+      "Dysgraphia, a motor disability",
+      "APD, a hearing disability",
+      "Dyslexia, a language-based learning disability"
+    ],
+    "a": 3,
+    "e": "Dyslexia affects reading fluency, decoding, comprehension, recall, writing and spelling. It is sometimes called a language-based learning disability. Dyscalculia concerns mathematics. Dysgraphia centers on handwriting and written composition. Auditory processing disorder concerns processing sound differences, not reading decoding."
+  },
+  {
+    "q": "Which statement about Language Processing Disorder (LPD) is accurate?",
+    "o": [
+      "It is a form of hearing loss caused by damage to the ear",
+      "It affects only expressive language",
+      "It relates only to the processing of language and can affect expressive and/or receptive language",
+      "It mainly affects handwriting and fine motor skills"
+    ],
+    "a": 2,
+    "e": "LPD is difficulty attaching meaning to sound groups that form words, sentences and stories. It is limited to language processing, and either expressive or receptive language can be affected. A is incorrect because it is not an ear or hearing problem. B is incorrect because receptive language can also be affected. D describes dysgraphia."
+  },
+  {
+    "q": "A child has a rich vocabulary and strong verbal skills but poor coordination, weak visual-spatial skills, and difficulty interpreting facial expressions and body language. Which condition best fits?",
+    "o": [
+      "Dyslexia",
+      "Non-Verbal Learning Disability (NVLD)",
+      "Language Processing Disorder",
+      "Dysgraphia"
+    ],
+    "a": 1,
+    "e": "NVLD involves a significant difference between stronger verbal skills and weaker motor, visual-spatial and social skills. People with NVLD may struggle with nonverbal cues and coordination. Dyslexia is a language-based reading difficulty. LPD is a language-processing problem. Dysgraphia mainly affects handwriting and written composition."
+  },
+  {
+    "q": "Which behaviors are characteristic of a visual perceptual/visual motor deficit?",
+    "o": [
+      "Excellent drawing ability but poor listening skills",
+      "Difficulty understanding spoken sentences but accurate copying",
+      "Fluent speech with frequent word repetitions",
+      "Losing place frequently, holding a pencil too firmly, and poor eye/hand coordination"
+    ],
+    "a": 3,
+    "e": "This deficit affects understanding what a person sees and the ability to draw or copy. It may cause difficulty noticing differences in shapes or printed letters, losing one's place, holding a pencil too firmly and cutting. A is incorrect because drawing and copying may be impaired. B describes a spoken-language issue and incorrectly says copying is accurate. C describes a speech fluency problem such as stuttering."
+  },
+  {
+    "q": "A child says 'wabbit' for 'rabbit' and 'bo' for 'boat.' Which types of articulation error are these, in that order?",
+    "o": [
+      "Substitution and omission",
+      "Distortion and substitution",
+      "Omission and distortion",
+      "Stuttering and cluttering"
+    ],
+    "a": 0,
+    "e": "Wabbit replaces one sound with another, which is substitution. Bo drops the final sound, which is omission. Distortion changes a sound, illustrated by shlip for sip. B incorrectly classifies the dropped sound as distortion. C reverses the first two errors. D describes fluency disorders, not articulation errors."
+  },
+  {
+    "q": "Which pairing of fluency disorder and description is correct?",
+    "o": [
+      "Stuttering: excessively fast and jerky speech",
+      "Cluttering: rapid-fire repetitions",
+      "Stuttering: rapid-fire repetitions; cluttering: excessively fast and jerky speech",
+      "Stuttering: problems with the quality of the voice"
+    ],
+    "a": 2,
+    "e": "The chapter describes stuttering as rapid-fire repetitions and cluttering as excessively fast and jerky speech. A and B swap the descriptions. D describes a voice disorder, which is a separate category."
+  },
+  {
+    "q": "A child pronounces words correctly, forms words and sentences correctly, and understands word meanings, but does not take turns in conversation and chooses inappropriate topics. Which component of language is impaired?",
+    "o": [
+      "Phonology",
+      "Morphology",
+      "Syntax",
+      "Pragmatics"
+    ],
+    "a": 3,
+    "e": "Pragmatics combines language components into functional, socially appropriate communication. Turn-taking and topic selection are pragmatic skills. Phonology concerns speech sounds. Morphology concerns word structure and forms. Syntax concerns word order and sentence construction."
+  },
+  {
+    "q": "Which set of characteristics is listed for autism in the chapter?",
+    "o": [
+      "Strong peer attachment, broad interests, fluent communication",
+      "Repetitive behavior, abnormal movements, weak social attachment, narrowly focused or odd interests",
+      "Isolated hearing loss and normal social behavior",
+      "Hyperactivity and an inability to sit still only"
+    ],
+    "a": 1,
+    "e": "The chapter lists repetitive behavior, abnormal movements, weak social attachment, narrowly focused or unusual interests, aggression toward self or others and communication disorder. A describes the opposite of several listed characteristics. C incorrectly describes autism as isolated hearing loss. D describes motor excess associated with emotional and behavioral disorders. Outdated wording on the source slide is intentionally not tested."
+  },
+  {
+    "q": "Which is a listed characteristic of emotional and behavioral disorders?",
+    "o": [
+      "Inability to learn that cannot be explained by intellectual, sensory or health factors",
+      "Learning difficulty fully explained by an intellectual disability",
+      "Consistently appropriate behavior under normal circumstances",
+      "A general pervasive mood of cheerfulness"
+    ],
+    "a": 0,
+    "e": "A listed characteristic is an inability to learn that cannot be explained by intellectual, sensory or health factors. Other characteristics include difficulty building or maintaining satisfactory relationships, inappropriate behavior or feelings, a pervasive mood of unhappiness or depression, and physical symptoms or fears related to personal or school problems. B contradicts the criterion. C is the opposite of inappropriate behavior. D is incorrect because the listed mood is unhappiness or depression."
+  },
+  {
+    "q": "A student throws violent tantrums, is disruptive and acts out to seek attention. Which classification fits best?",
+    "o": [
+      "Attention problems",
+      "Anxiety/withdrawn",
+      "Conduct disorder (overt type)",
+      "Psychotic behavior"
+    ],
+    "a": 2,
+    "e": "Conduct disorder may involve attention seeking, disruption and acting out. The overt type involves violence or tantrums, while the covert type involves lying, stealing and/or drug use. Attention problems involve distractibility and impulsivity. Anxiety/withdrawn describes reserved, self-conscious individuals with low self-esteem. Psychotic behavior involves hallucinations, fantasy worlds or talking nonsense."
+  },
+  {
+    "q": "A student is shy, socially withdrawn, has feelings of inferiority and worries a great deal. Under Kauffman's (1993) classification, which broad category does this fit?",
+    "o": [
+      "Externalizing behavior (under-controlled)",
+      "Internalizing behavior (over-controlled)",
+      "Externalizing behavior (over-controlled)",
+      "Motor excess"
+    ],
+    "a": 1,
+    "e": "Internalizing behavior includes anxiety, immaturity, shyness, social withdrawal, feelings of inadequacy, guilt, depression and excessive worry. Externalizing behavior is under-controlled and includes disobedience, fighting, tantrums and attention seeking. C uses the wrong control classification. Motor excess refers to hyperactivity and is a subtype, not the broad category."
+  },
+  {
+    "q": "Child abuse, neglect and poor disciplinary practices at home belong to which category of causes?",
+    "o": [
+      "Biological",
+      "Environmental",
+      "Cultural",
+      "Family factors"
+    ],
+    "a": 3,
+    "e": "Family factors include family interactions and influence, child abuse, neglect and poor disciplinary practices at home. Biological causes include genetic disorders, brain damage, malnutrition, allergies, temperament and central nervous system damage. Environmental causes include peer pressure, impoverished areas and unresponsive schooling practices. Cultural causes include negative traditional practices and exposure to violent or sexually oriented programs."
+  },
+  {
+    "q": "Which combination matches the chapter's criteria for intellectual disability?",
+    "o": [
+      "IQ around 70–75 or below, significant limitations in two or more adaptive skill areas, and onset before age 18",
+      "IQ below 100, adaptive skills intact, and onset after age 18",
+      "IQ above 85 with academic difficulty only",
+      "Adaptive skill limitations only, with onset at any age"
+    ],
+    "a": 0,
+    "e": "The chapter describes intellectual disability as limitations in intellectual functioning and adaptive behavior, with onset before age 18. The stated IQ threshold is around 70–75 or below, alongside significant limitations in two or more adaptive skill areas. B gives an incorrect threshold and onset. C does not meet the described criteria. D omits intellectual-functioning limitations and the age-of-onset requirement."
+  },
+  {
+    "q": "Which option correctly classifies each skill into its adaptive skill area?",
+    "o": [
+      "Language and literacy: practical; interpersonal skills: conceptual; personal care: social",
+      "Language and literacy: social; interpersonal skills: practical; personal care: conceptual",
+      "Language and literacy: conceptual; interpersonal skills: social; personal care: practical",
+      "Language and literacy: practical; interpersonal skills: social; personal care: conceptual"
+    ],
+    "a": 2,
+    "e": "Conceptual skills include language and literacy, and money, time and number concepts. Social skills include interpersonal skills and social responsibility. Practical skills include activities of daily living such as personal care. A and B mismatch all three areas. D correctly classifies interpersonal skills but misclassifies language and literacy and personal care."
+  },
+  {
+    "q": "According to the chapter, why do students with intellectual disabilities often seem inattentive?",
+    "o": [
+      "They refuse to pay attention in class",
+      "They do not understand the information, or do not filter it to get to the salient features",
+      "Their memory is above average but they lack interest",
+      "They always have a hearing impairment"
+    ],
+    "a": 1,
+    "e": "Learning and memory are significantly below average compared with peers. The chapter explains that the problem is not unwillingness to attend, but difficulty understanding information or filtering it to identify salient features. A incorrectly assumes refusal. C contradicts the description of learning and memory. D is not the explanation given."
+  },
+  {
+    "q": "A student walks with braces and crutches and has some difficulty with fine-motor skills and speech production. How is this level of physical disability classified?",
+    "o": [
+      "Mild physical disability",
+      "Severe physical disability",
+      "Not a physical disability",
+      "Moderate physical disability"
+    ],
+    "a": 3,
+    "e": "Moderate physical disability describes individuals who walk with braces and crutches and may have difficulty with fine-motor skills and speech production. Mild disability involves walking without aids and normal developmental progress. Severe disability involves wheelchair dependence and the need for special help to achieve regular development. C is incorrect because the described mobility and motor limitations constitute a physical disability."
+  },
+  {
+    "q": "Which statement correctly describes orthopedic impairment and health impairment?",
+    "o": [
+      "Orthopedic impairment generally refers to conditions of the muscular or skeletal system; health impairment is a condition that requires ongoing medical attention",
+      "Orthopedic impairment requires ongoing medical attention; health impairment concerns only the skeleton",
+      "Both refer exclusively to learning problems",
+      "Orthopedic impairment refers to emotional disorders; health impairment refers to speech disorders"
+    ],
+    "a": 0,
+    "e": "Orthopedic impairment generally refers to conditions of the muscular or skeletal system and may also cover physically disabling conditions of the nervous system. Health impairment is a condition requiring ongoing medical attention. Examples include asthma, heart defects, cancer, diabetes, hemophilia and HIV/AIDS. B swaps the definitions. C and D incorrectly classify both terms."
+  },
+  {
+    "q": "In a person with a spinal cord injury, the brain sends messages that the muscles never receive. According to the chapter, why does this happen?",
+    "o": [
+      "The brain sends the wrong instructions",
+      "The muscles gradually become weaker",
+      "The pathways between the brain and the muscles are interrupted",
+      "The joints become inflamed and stiff"
+    ],
+    "a": 2,
+    "e": "With a spinal cord injury or deformity, the pathways between the brain and muscles are interrupted, so messages are transmitted but never received. A describes incorrect instructions or misinterpreted feedback, associated with conditions such as cerebral palsy or traumatic brain injury. B describes progressive weakness such as muscular dystrophy. D describes joint inflammation such as arthritis."
+  },
+  {
+    "q": "Which statement about epilepsy is consistent with the chapter?",
+    "o": [
+      "All people with epilepsy have severe intellectual disability",
+      "Once diagnosed, it can usually be controlled with medication, and most people with epilepsy have normal intelligence",
+      "It cannot be treated and always interferes with schooling",
+      "It only involves falling to the floor and moving uncontrollably"
+    ],
+    "a": 1,
+    "e": "Epilepsy is a seizure disorder in which brain cells are not working properly. The chapter states that it can usually be controlled with medication and most people with epilepsy have normal intelligence. A is incorrect because most have normal intelligence. C is incorrect because treatment is available and it does not necessarily interfere with school performance. D is incorrect because some children experience only a momentary loss of attention, described as petit mal seizures."
+  },
+  {
+    "q": "Which statement about spina bifida is correct?",
+    "o": [
+      "It is an acquired viral disease",
+      "Its cause is well established",
+      "It involves progressive muscle weakness from age 3 to 4",
+      "It is a birth defect of the backbone that often causes paralysis and loss of sensation; it usually occurs in the first twenty-six days of pregnancy"
+    ],
+    "a": 3,
+    "e": "Spina bifida is a birth defect in which some bones of the spine have not developed normally. It may cause paralysis and loss of sensation and usually occurs during the first twenty-six days of pregnancy. The chapter says its cause is unknown. A describes an acquired infection, not spina bifida. B contradicts the chapter. C describes the typical onset of muscular dystrophy."
+  },
+  {
+    "q": "A boy begins showing muscle weakness at around 3 to 4 years of age, which gets steadily worse, and by about age 11 he can no longer walk. Which condition and course does the chapter describe?",
+    "o": [
+      "Muscular dystrophy, with death usually between ages 25 and 35 from respiratory failure or cardiac arrest",
+      "Arthritis, with joint deformities that never affect mobility",
+      "Polio, a viral disease that invades the brain",
+      "Epilepsy, which is usually controlled with medication"
+    ],
+    "a": 0,
+    "e": "The chapter describes muscular dystrophy as a condition people are born with in which muscles gradually weaken. Weakness usually appears around 3 to 4 years and progressively worsens; the chapter describes loss of walking ability by around age 11 and death usually between 25 and 35 from respiratory failure or cardiac arrest. Arthritis involves joint inflammation. Polio is a viral disease that can cause paralysis. Epilepsy is a seizure disorder, not progressive muscle weakness."
+  },
+  {
+    "q": "Which set lists conditions the chapter classifies under the musculoskeletal system?",
+    "o": [
+      "Epilepsy, spina bifida, cerebral palsy",
+      "Asthma, diabetes, hemophilia",
+      "Muscular dystrophy, arthritis, amputation",
+      "Dyslexia, dyscalculia, dysgraphia"
+    ],
+    "a": 2,
+    "e": "Musculoskeletal conditions affect muscles, their supporting framework and the skeleton. The chapter lists progressive muscle weakness (muscular dystrophy), joint inflammation (arthritis) and loss of body parts (amputation). A lists neurological conditions. B lists health impairments. D lists specific learning disabilities."
+  },
+  {
+    "q": "Which features are described for individuals with Marfan syndrome?",
+    "o": [
+      "Long, thin limbs, prominent shoulder blades, spinal curvature, flat feet, and long fingers and thumbs",
+      "A normal torso with a straight upper back and a curved lower back",
+      "Openings in the lip or roof of the mouth",
+      "Ankle or foot twisting inward"
+    ],
+    "a": 0,
+    "e": "The chapter lists long, thin limbs, prominent shoulder blades, spinal curvature, flat feet, and long fingers and thumbs. Marfan syndrome is a genetic connective-tissue disorder; the source slide incorrectly attributes it to poorly developed muscles. B describes achondroplasia in the chapter. C describes cleft lip and cleft palate. D describes club foot."
+  },
+  {
+    "q": "Which description of cleft lip and cleft palate matches the chapter?",
+    "o": [
+      "A viral disease that causes paralysis",
+      "Openings in the lip or roof of the mouth that fail to close before birth, with unknown cause; most can be repaired through surgery",
+      "A gradual weakening of the muscles",
+      "A disorder of reading and language processing"
+    ],
+    "a": 1,
+    "e": "Cleft lip is an opening in the lip and cleft palate is an opening in the roof of the mouth. These openings fail to close before birth, and most can be repaired through surgery. A describes polio. C describes muscular dystrophy. D describes a learning disability such as dyslexia."
+  },
+  {
+    "q": "Which student has a condition the chapter classifies as a health impairment?",
+    "o": [
+      "A student who stutters",
+      "A student with dysgraphia",
+      "A student with conduct disorder",
+      "A student with diabetes who requires ongoing medical attention"
+    ],
+    "a": 3,
+    "e": "Health impairment is a condition requiring ongoing medical attention. The chapter lists diabetes, asthma, heart disease, cystic fibrosis, AIDS, hemophilia, kidney disorders, sickle-cell anemia, leukemia, lead poisoning, rheumatic fever, tuberculosis and cancer. Stuttering is a speech fluency impairment. Dysgraphia is a specific learning disability. Conduct disorder is an emotional and behavioral disorder."
+  },
+  {
+    "q": "A report describes (1) the disintegration of social patterns in a community and (2) the community's limited access to political power and representation. How does the chapter label these two causes?",
+    "o": [
+      "(1) Political vulnerability; (2) social vulnerability",
+      "(1) Economic vulnerability; (2) environmental vulnerability",
+      "(1) Social vulnerability; (2) political vulnerability",
+      "(1) Genetic vulnerability; (2) cultural vulnerability"
+    ],
+    "a": 2,
+    "e": "The chapter identifies disintegration of social patterns as social vulnerability and limited access to political power and representation as political vulnerability. Other causes include rapid population growth, poverty and hunger, poor health, low education, gender inequality, hazardous locations, and lack of access to resources, information and public awareness. A swaps the labels. B and D use categories that do not match the two examples."
+  },
+  {
+    "q": "According to the chapter, which group is vulnerable because of fewer material and/or financial resources?",
+    "o": [
+      "Low-income households and the homeless",
+      "Infants and older adults",
+      "Children, illiterate people, foreigners and tourists",
+      "People with intellectual disabilities only"
+    ],
+    "a": 0,
+    "e": "The chapter identifies low-income households and homeless people as vulnerable because they have fewer material and/or financial resources. Infants and older adults are listed under less physically or mentally capable. Children, illiterate people, foreigners and tourists are listed under less knowledge or experience. Intellectual disability alone is not the category described by fewer resources."
+  }
+]

@@ -93,6 +93,22 @@ const library = [
                 count: 40
               }
             ]
+          }) : name === 'Inclusiveness' ? ({
+            type: 'subject',
+            id: `year-2-subject-${index + 1}`,
+            name,
+            description: 'Disability and Vulnerability — Chapter One.',
+            icon: 'Ⅱ',
+            ready: true,
+            collections: [
+              {
+                name: 'Chapter One — Understanding Disability and Vulnerability',
+                subjectName: 'Inclusiveness',
+                description: 'Inclusiveness Chapter One — 40 questions. Source: Chapter One.pptx.',
+                file: 'subjects/year-2/semester-1/inclusiveness/chapter-one/questions.json',
+                count: 40
+              }
+            ]
           }) : ({
             type: 'subject',
             id: `year-2-subject-${index + 1}`,
