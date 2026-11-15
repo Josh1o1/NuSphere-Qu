@@ -109,6 +109,22 @@ const library = [
                 count: 40
               }
             ]
+          }) : name === 'Pathophysiology' ? ({
+            type: 'subject',
+            id: `year-2-subject-${index + 1}`,
+            name,
+            description: 'Pathophysiology — Mid Exam Practice.',
+            icon: 'Ⅱ',
+            ready: true,
+            collections: [
+              {
+                name: 'Mid Exam Practice',
+                subjectName: 'Pathophysiology',
+                description: '20 MCQs and 9 short-answer questions.',
+                file: 'subjects/year-2/semester-1/pathophysiology/mid-exam-practice/questions.json',
+                count: 29
+              }
+            ]
           }) : ({
             type: 'subject',
             id: `year-2-subject-${index + 1}`,
@@ -337,14 +353,23 @@ async function start(collection) {
     }
 
     for (const [i, q] of data.entries()) {
-      if (
-        !q.q ||
-        !Array.isArray(q.o) ||
-        !Number.isInteger(q.a) ||
-        q.a < 0 ||
-        q.a >= q.o.length ||
-        !q.e
-      ) {
+      const validShort =
+        q.type === 'short' &&
+        q.q &&
+        typeof q.answer === 'string' &&
+        q.answer.trim();
+
+      const validMcq =
+        q.type !== 'short' &&
+        q.q &&
+        Array.isArray(q.o) &&
+        q.o.length >= 2 &&
+        Number.isInteger(q.a) &&
+        q.a >= 0 &&
+        q.a < q.o.length &&
+        q.e;
+
+      if (!validShort && !validMcq) {
         throw new Error(`Invalid question data at question ${i + 1}.`);
       }
     }
@@ -376,7 +401,8 @@ async function start(collection) {
 
 function render() {
   const q = questions[index];
-  choice = answers[index];
+  const isShort = q.type === 'short';
+  choice = isShort ? null : answers[index];
 
   $('count').textContent =
     `QUESTION ${String(index + 1).padStart(2, '0')} / ${questions.length}`;
@@ -385,98 +411,134 @@ function render() {
     `${Math.round(index / questions.length * 100)}% COMPLETE`;
 
   $('fill').style.width = `${index / questions.length * 100}%`;
-
   $('section').textContent = q.g || q.topic || currentSubject.name;
   $('question').textContent = q.q;
 
   const details = [
-    q.difficulty,
+    isShort ? 'SHORT ANSWER' : q.difficulty,
     q.topic,
     q.slide ? `Slide ${q.slide}` : null
   ].filter(Boolean);
 
   $('hint').textContent = details.length
     ? details.join(' · ')
-    : q.t
-      ? 'Choose True or False, then check your answer.'
-      : 'Choose one answer, then check your answer.';
+    : isShort
+      ? 'Write your answer, then check the model answer.'
+      : q.t
+        ? 'Choose True or False, then check your answer.'
+        : 'Choose one answer, then check your answer.';
 
   $('answers').replaceChildren();
 
-  q.o.forEach((txt, i) => {
-    const button = document.createElement('button');
-    button.className = 'option';
-    button.type = 'button';
+  if (isShort) {
+    const textarea = document.createElement('textarea');
+    textarea.className = 'short-response';
+    textarea.placeholder = 'Write your answer here...';
+    textarea.rows = 6;
+    textarea.value = answers[index] || '';
+    textarea.disabled = checked[index];
+    textarea.setAttribute('aria-label', 'Your short answer');
 
-    const letter = document.createElement('span');
-    letter.className = 'letter';
-    letter.textContent = String.fromCharCode(65 + i);
+    const checkButton = document.createElement('button');
+    checkButton.className = 'primary short-check';
+    checkButton.type = 'button';
+    checkButton.textContent = 'Check Answer';
+    checkButton.disabled = checked[index] || !textarea.value.trim();
 
-    const text = document.createElement('span');
-    text.textContent = txt;
+    textarea.addEventListener('input', () => {
+      answers[index] = textarea.value;
+      checkButton.disabled = !textarea.value.trim();
+    });
 
-    button.append(letter, text);
+    checkButton.addEventListener('click', () => {
+      if (!textarea.value.trim() || checked[index]) return;
+      answers[index] = textarea.value.trim();
+      checked[index] = true;
+      render();
+    });
 
-    if (choice === i) button.classList.add('selected');
+    $('answers').append(textarea, checkButton);
+  } else {
+    q.o.forEach((txt, i) => {
+      const button = document.createElement('button');
+      button.className = 'option';
+      button.type = 'button';
 
-    if (checked[index]) {
-      button.disabled = true;
-      if (i === q.a) button.classList.add('correct');
-      else if (i === choice) button.classList.add('wrong');
-    } else {
-      button.addEventListener('click', () => {
-        choice = i;
-        answers[index] = i;
+      const letter = document.createElement('span');
+      letter.className = 'letter';
+      letter.textContent = String.fromCharCode(65 + i);
 
-        [...$('answers').children].forEach((item, j) => {
-          item.classList.toggle('selected', j === i);
+      const text = document.createElement('span');
+      text.textContent = txt;
+      button.append(letter, text);
+
+      if (choice === i) button.classList.add('selected');
+
+      if (checked[index]) {
+        button.disabled = true;
+        if (i === q.a) button.classList.add('correct');
+        else if (i === choice) button.classList.add('wrong');
+      } else {
+        button.addEventListener('click', () => {
+          choice = i;
+          answers[index] = i;
+
+          [...$('answers').children].forEach((item, j) => {
+            item.classList.toggle('selected', j === i);
+          });
+
+          $('next').disabled = false;
         });
+      }
 
-        $('next').disabled = false;
-      });
-    }
-
-    $('answers').append(button);
-  });
+      $('answers').append(button);
+    });
+  }
 
   $('previous').disabled = index === 0;
-  $('next').disabled = !checked[index] && choice === null;
+  $('next').disabled = !checked[index] && (isShort || choice === null);
   $('next').textContent = checked[index]
     ? index === questions.length - 1 ? 'See results →' : 'Next question →'
-    : 'Check answer →';
+    : isShort ? 'Answer the question above' : 'Check answer →';
 
   $('skip').textContent = 'Skip for now';
 
-  if (checked[index]) {
-    showFeedback();
-  } else {
-    $('feedback').className = 'feedback hidden';
-  }
+  if (checked[index]) showFeedback();
+  else $('feedback').className = 'feedback hidden';
 }
 
 function showFeedback() {
   const q = questions[index];
-  const correct = answers[index] === q.a;
 
-  $('feedback').className = `feedback${correct ? '' : ' wrong'}`;
-  $('feedback-title').textContent = correct
-    ? 'Correct. Well done.'
-    : 'Not quite — learn from it.';
+  if (q.type === 'short') {
+    $('feedback').className = 'feedback';
+    $('feedback-title').textContent = 'Model answer';
+    $('feedback-answer').textContent =
+      `Your response: ${answers[index] || 'No response entered.'}`;
+    $('explanation').textContent = q.answer;
+  } else {
+    const correct = answers[index] === q.a;
 
-  $('feedback-answer').textContent = correct
-    ? `Your answer: ${q.o[q.a]}`
-    : `Correct answer: ${q.o[q.a]}`;
+    $('feedback').className = `feedback${correct ? '' : ' wrong'}`;
+    $('feedback-title').textContent = correct
+      ? 'Correct. Well done.'
+      : 'Not quite — learn from it.';
 
-  const explanation = [q.e];
+    $('feedback-answer').textContent = correct
+      ? `Your answer: ${q.o[q.a]}`
+      : `Correct answer: ${q.o[q.a]}`;
 
-  if (q.why && Array.isArray(q.why)) {
-    explanation.push(
-      'Why the other options are incorrect:',
-      ...q.why.map(item => `• ${item}`)
-    );
+    const explanation = [q.e];
+
+    if (q.why && Array.isArray(q.why)) {
+      explanation.push(
+        'Why the other options are incorrect:',
+        ...q.why.map(item => `• ${item}`)
+      );
+    }
+
+    $('explanation').textContent = explanation.join('\n\n');
   }
-
-  $('explanation').textContent = explanation.join('\n\n');
 
   $('fill').style.width = `${(index + 1) / questions.length * 100}%`;
   $('percent').textContent =
@@ -536,14 +598,19 @@ function results() {
   $('quiz').classList.add('hidden');
   $('results').classList.remove('hidden');
 
-  const total = questions.reduce(
-    (score, q, i) => score + (answers[i] === q.a ? 1 : 0),
+  const mcqs = questions
+    .map((q, i) => ({ q, i }))
+    .filter(item => item.q.type !== 'short');
+
+  const total = mcqs.reduce(
+    (score, item) => score + (answers[item.i] === item.q.a ? 1 : 0),
     0
   );
 
-  $('score').textContent = `${total} / ${questions.length}`;
-  $('accuracy').textContent =
-    `${Math.round(total / questions.length * 100)}%`;
+  $('score').textContent = `${total} / ${mcqs.length} MCQs`;
+  $('accuracy').textContent = mcqs.length
+    ? `${Math.round(total / mcqs.length * 100)}%`
+    : 'N/A';
 
   $('review').classList.add('hidden');
   $('review').replaceChildren();
@@ -565,37 +632,39 @@ function review() {
 
   questions.forEach((q, i) => {
     const article = document.createElement('article');
-
     const heading = document.createElement('h3');
     heading.textContent = `${i + 1}. ${q.q}`;
 
     const result = document.createElement('p');
-
-    if (answers[i] === q.a) {
-      result.textContent = `Correct · ${q.o[q.a]}`;
-      result.style.color = '#315e4d';
-    } else {
-      result.textContent =
-        `Correct answer · ${q.o[q.a]}` +
-        (answers[i] === null
-          ? ' · Skipped'
-          : ` · Your answer: ${q.o[answers[i]]}`);
-
-      result.style.color = '#a64f43';
-    }
-
     const explanation = document.createElement('p');
-    explanation.textContent = q.e;
+
+    if (q.type === 'short') {
+      result.textContent = `Your response: ${answers[i] || 'Not answered'}`;
+      result.style.color = '#315e4d';
+      explanation.textContent = `Model answer: ${q.answer}`;
+    } else {
+      if (answers[i] === q.a) {
+        result.textContent = `Correct · ${q.o[q.a]}`;
+        result.style.color = '#315e4d';
+      } else {
+        result.textContent =
+          `Correct answer · ${q.o[q.a]}` +
+          (answers[i] === null
+            ? ' · Skipped'
+            : ` · Your answer: ${q.o[answers[i]]}`);
+
+        result.style.color = '#a64f43';
+      }
+
+      explanation.textContent = q.e;
+
+      if (q.why && Array.isArray(q.why)) {
+        explanation.textContent +=
+          `\n\nOther options: ${q.why.join(' | ')}`;
+      }
+    }
 
     article.append(heading, result, explanation);
-
-    if (q.why && Array.isArray(q.why)) {
-      const rationales = document.createElement('p');
-      rationales.textContent =
-        `Other options: ${q.why.join(' | ')}`;
-      article.append(rationales);
-    }
-
     box.append(article);
   });
 

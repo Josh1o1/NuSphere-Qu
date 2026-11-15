@@ -1,0 +1,176 @@
+[
+  {
+    "q": "A 43-year-old woman presents with bilateral hand joint pain, morning stiffness lasting more than an hour, and visible swelling of her wrists. She reports fatigue and says her symptoms have persisted for months. Lab results show elevated inflammatory markers. Which of the following is the most likely diagnosis?",
+    "o": ["Osteoarthritis", "Gout", "Rheumatoid arthritis", "Dermatitis"],
+    "a": 2,
+    "e": "Rheumatoid arthritis is a chronic autoimmune inflammatory disease that commonly causes symmetrical joint pain, prolonged morning stiffness, swelling, and elevated inflammatory markers."
+  },
+  {
+    "q": "A 58-year-old male presents with sudden, severe pain and swelling in his big toe. The area is red, hot, and tender. He admits to consuming alcohol and red meat the night before. What is the underlying cause of his condition?",
+    "o": ["Hyaluronic acid deficiency", "Accumulation of uric acid crystals", "Synovial infection", "Cartilage degeneration"],
+    "a": 1,
+    "e": "Gout results from deposition of monosodium urate crystals in joints and surrounding tissues, producing an acute inflammatory response."
+  },
+  {
+    "q": "A 17-year-old adolescent male presents with oily skin and numerous blackheads and whiteheads on his face and back. He is going through puberty and has a family history of acne. Which of the following does NOT play a key role in acne pathogenesis?",
+    "o": ["Increased sebum production", "Bacterial overgrowth", "Hormonal changes", "Synovial fluid destruction"],
+    "a": 3,
+    "e": "Acne involves increased sebum production, follicular plugging, Cutibacterium acnes activity, and inflammation. Synovial fluid destruction is unrelated."
+  },
+  {
+    "q": "Which of the following is NOT a classic local sign of inflammation?",
+    "o": ["Redness", "Heat", "Fever", "Swelling"],
+    "a": 2,
+    "e": "The classic local signs include redness, heat, swelling, pain, and loss of function. Fever is a systemic manifestation of inflammation."
+  },
+  {
+    "q": "Which cells are the first responders during acute inflammation?",
+    "o": ["Macrophages", "Neutrophils", "T cells", "B cells"],
+    "a": 1,
+    "e": "Neutrophils are usually the first circulating leukocytes recruited to sites of acute inflammation, where they phagocytose microorganisms and cellular debris."
+  },
+  {
+    "q": "Which of the following describes hypertrophy?",
+    "o": ["Increase in number of cells", "Decrease in cell size", "Increase in cell size", "Change in cell type"],
+    "a": 2,
+    "e": "Hypertrophy is an increase in the size of individual cells, resulting in enlargement of the affected tissue or organ. Hyperplasia means an increase in cell number."
+  },
+  {
+    "q": "Which type of necrosis is commonly associated with bacterial infections that produce pus and abscesses?",
+    "o": ["Coagulative necrosis", "Fat necrosis", "Liquefactive necrosis", "Gangrenous necrosis"],
+    "a": 2,
+    "e": "Liquefactive necrosis involves enzymatic digestion of dead cells, producing a liquid or viscous mass. It is characteristic of many bacterial abscesses."
+  },
+  {
+    "q": "The deposits of uric acid crystals in tissues are called:",
+    "o": ["Nodes", "Granulomas", "Tophi", "Plaques"],
+    "a": 2,
+    "e": "Tophi are deposits of monosodium urate crystals in soft tissues, commonly associated with chronic gout. The singular form is tophus."
+  },
+  {
+    "q": "A 58-year-old man comes for a routine check-up. He has had persistent blood pressure readings of 150/95 mmHg. He denies any current symptoms. He has a history of high salt intake and sedentary lifestyle. What is the most likely pathophysiologic mechanism contributing to his hypertension?",
+    "o": ["Decreased afterload", "Reduced cardiac output", "Increased peripheral vascular resistance", "Decreased blood viscosity"],
+    "a": 2,
+    "e": "Increased systemic peripheral vascular resistance is a major mechanism contributing to hypertension. Sodium retention and vascular changes can contribute to increased blood pressure."
+  },
+  {
+    "q": "A 65-year-old smoker with a history of high cholesterol presents to the hospital with chest pain radiating to the left arm. ECG confirms a myocardial infarction. What is the most likely cause of this patient's infarction?",
+    "o": ["Valve stenosis", "Embolism from a leg vein", "Plaque rupture with thrombus formation", "Aortic aneurysm"],
+    "a": 2,
+    "e": "Most acute myocardial infarctions result from rupture or erosion of an atherosclerotic coronary plaque, followed by thrombus formation that obstructs blood flow."
+  },
+  {
+    "q": "Which of the following is NOT typically seen in left-sided heart failure?",
+    "o": ["Shortness of breath", "Dyspnea", "Peripheral edema", "Orthopnea"],
+    "a": 2,
+    "e": "Left-sided heart failure commonly causes pulmonary congestion, dyspnea, and orthopnea. Peripheral edema is more characteristic of systemic venous congestion in right-sided heart failure, although it may occur in advanced or combined heart failure."
+  },
+  {
+    "q": "A trauma patient presents with low blood pressure (80/50 mmHg), rapid pulse, cold, clammy skin, and confusion. He has visible external bleeding. What type of shock is this patient most likely experiencing?",
+    "o": ["Cardiogenic", "Septic", "Hypovolemic", "Neurogenic"],
+    "a": 2,
+    "e": "External blood loss reduces circulating blood volume, venous return, and cardiac output, producing hypovolemic shock."
+  },
+  {
+    "q": "Which is the primary pathophysiologic mechanism in hypovolemic shock?",
+    "o": ["Reduced heart contractility", "Decreased circulating blood volume", "Peripheral vasodilation", "Bacterial endotoxins"],
+    "a": 1,
+    "e": "Hypovolemic shock begins with loss of blood or fluid, reducing venous return, ventricular filling, stroke volume, and tissue perfusion."
+  },
+  {
+    "q": "A 45-year-old woman presents with excessive thirst and urination. Lab results show low ADH levels. Which condition is most likely?",
+    "o": ["Nephrogenic diabetes insipidus", "Central diabetes insipidus", "Type 2 diabetes mellitus", "Hyperthyroidism"],
+    "a": 1,
+    "e": "Central diabetes insipidus results from inadequate production or release of antidiuretic hormone (ADH), causing excessive dilute urine and thirst."
+  },
+  {
+    "q": "A patient diagnosed with Cushing's syndrome due to a pituitary adenoma would exhibit which hormonal abnormality?",
+    "o": ["Increased ACTH and increased cortisol", "Decreased ACTH and increased cortisol", "Normal ACTH and low cortisol", "Increased ADH and decreased cortisol"],
+    "a": 0,
+    "e": "A pituitary ACTH-secreting adenoma causes Cushing disease. ACTH stimulates the adrenal cortex to produce excess cortisol."
+  },
+  {
+    "q": "In a stroke patient with sudden speech difficulty and right-side weakness, which underlying pathophysiology is most responsible?",
+    "o": ["Progressive dopamine loss", "Disruption of cerebral blood flow", "Inflammatory damage to meninges", "Overproduction of thyroid hormone"],
+    "a": 1,
+    "e": "Stroke occurs when cerebral blood flow is interrupted by vessel blockage or bleeding, damaging brain tissue. The affected brain region determines the neurological deficits."
+  },
+  {
+    "q": "A patient presents with muscle weakness. Labs reveal a potassium level of 6.5 mEq/L and signs of renal failure. Which of the following best explains this condition?",
+    "o": ["GI loss of potassium", "Diuretic use", "Decreased renal excretion of potassium", "Magnesium deficiency"],
+    "a": 2,
+    "e": "The kidneys are the main route for potassium excretion. Renal failure can reduce potassium elimination and cause hyperkalemia."
+  },
+  {
+    "q": "A mountaineer develops dizziness and tingling in his fingers during a high-altitude expedition. ABG shows pH 7.50 and PaCO2 of 30 mmHg. What is the most likely diagnosis?",
+    "o": ["Metabolic acidosis", "Respiratory alkalosis", "Respiratory acidosis", "Metabolic alkalosis"],
+    "a": 1,
+    "e": "At high altitude, hypoxia stimulates hyperventilation. Excessive carbon dioxide loss lowers PaCO2 and raises blood pH, causing respiratory alkalosis."
+  },
+  {
+    "q": "A child presents with vomiting and diarrhea for 2 days. Labs show pH 7.28, HCO3- 18 mEq/L, and PaCO2 32 mmHg. Which of the following is the correct interpretation?",
+    "o": ["Metabolic alkalosis", "Respiratory acidosis", "Metabolic acidosis", "Respiratory alkalosis"],
+    "a": 2,
+    "e": "The low pH indicates acidemia and the low bicarbonate indicates a primary metabolic acidosis. The reduced PaCO2 is consistent with respiratory compensation. Diarrhea can cause bicarbonate loss."
+  },
+  {
+    "q": "A healthcare worker develops a rash 24–48 hours after using latex gloves. Which immune response best explains this delayed reaction?",
+    "o": ["Immediate IgE-mediated Type I hypersensitivity", "T-cell-mediated Type IV delayed hypersensitivity", "Antibody-mediated Type II hypersensitivity", "Immune-complex Type III hypersensitivity"],
+    "a": 1,
+    "e": "This question's missing options were reconstructed because the source text was truncated. A delayed reaction appearing 24–48 hours after exposure is consistent with Type IV, T-cell-mediated hypersensitivity. Some glove-related delayed reactions are caused by rubber additives rather than latex proteins."
+  },
+  {
+    "type": "short",
+    "q": "Write the difference between acute inflammation and chronic inflammation.",
+    "answer": "Acute inflammation: A rapid, short-term response that usually lasts minutes to days. It is characterized mainly by fluid exudation and neutrophil infiltration. Chronic inflammation: A prolonged response lasting weeks, months, or longer, characterized by macrophages, lymphocytes, tissue destruction, and attempts at repair or fibrosis.",
+    "e": "Key comparison: onset and duration, predominant inflammatory cells, tissue injury, and repair."
+  },
+  {
+    "type": "short",
+    "q": "Differentiate between reversible and irreversible cell injury.",
+    "answer": "Reversible cell injury: Mild or temporary injury in which the cell can recover when the harmful stimulus is removed. Features may include cellular swelling and fatty change. Irreversible cell injury: Severe or prolonged injury from which the cell cannot recover, leading to cell death by necrosis or apoptosis. Severe membrane damage and irreversible mitochondrial dysfunction are important features.",
+    "e": "The key difference is whether the cell can return to normal after the damaging stimulus is removed."
+  },
+  {
+    "type": "short",
+    "q": "What are the 5 Rs of inflammation? Explain each one.",
+    "answer": "The 5 Rs are: (1) Recognition of the injurious agent by cells and receptors; (2) Recruitment of leukocytes and plasma proteins to the site; (3) Removal of the agent and dead tissue through phagocytosis and other mechanisms; (4) Regulation of the inflammatory response to prevent excessive tissue damage; and (5) Resolution and repair, restoring tissue structure and function or producing scar tissue when necessary.",
+    "e": "These stages describe how the body detects, responds to, controls, and recovers from inflammation."
+  },
+  {
+    "type": "short",
+    "q": "Describe the four main pathological events that lead to acne formation.",
+    "answer": "The four main events are: (1) Increased sebum production, often influenced by androgens; (2) Abnormal follicular keratinization, causing blockage of the hair follicle; (3) Growth and activity of Cutibacterium acnes within the blocked follicle; and (4) Inflammation, which can produce papules, pustules, nodules, and cyst-like lesions.",
+    "e": "Acne develops through interacting changes in sebum, follicular blockage, bacteria, and inflammation."
+  },
+  {
+    "type": "short",
+    "q": "Explain the pathophysiology of edema in heart failure.",
+    "answer": "In heart failure, reduced cardiac pumping causes reduced effective renal perfusion. The kidneys activate the renin–angiotensin–aldosterone system and increase ADH release, leading to sodium and water retention. Increased venous hydrostatic pressure also pushes fluid out of capillaries into tissues. These mechanisms contribute to peripheral or pulmonary edema, depending on the side and severity of heart failure.",
+    "e": "Remember: increased venous pressure plus sodium and water retention promotes fluid accumulation in tissues."
+  },
+  {
+    "type": "short",
+    "q": "List three major risk factors for developing atherosclerosis.",
+    "answer": "Three major modifiable risk factors are: (1) High LDL cholesterol or dyslipidemia; (2) Cigarette smoking; and (3) Hypertension. Diabetes mellitus, obesity, physical inactivity, and unhealthy diet are additional risk factors. Increasing age and family history are non-modifiable risks.",
+    "e": "Atherosclerosis is strongly associated with lipid abnormalities, endothelial injury, and chronic vascular inflammation."
+  },
+  {
+    "type": "short",
+    "q": "Explain the pathophysiological difference between Type 1 and Type 2 diabetes mellitus.",
+    "answer": "Type 1 diabetes mellitus: Autoimmune destruction of pancreatic beta cells causes absolute insulin deficiency. Type 2 diabetes mellitus: Body tissues become resistant to insulin, and pancreatic beta cells gradually fail to produce enough insulin to overcome this resistance. Both conditions cause hyperglycemia, but their underlying mechanisms differ.",
+    "e": "Type 1 is primarily an insulin-deficiency disorder due to beta-cell destruction; Type 2 involves insulin resistance with progressive beta-cell dysfunction."
+  },
+  {
+    "type": "short",
+    "q": "Explain how hyperventilation at high altitude can lead to respiratory alkalosis.",
+    "answer": "At high altitude, reduced atmospheric oxygen pressure causes hypoxemia. Peripheral chemoreceptors stimulate increased ventilation. Hyperventilation removes excessive carbon dioxide from the blood, lowering PaCO2. This reduces carbonic acid and hydrogen ion concentration, causing blood pH to rise and producing respiratory alkalosis.",
+    "e": "The central change is a fall in PaCO2 caused by increased ventilation."
+  },
+  {
+    "type": "short",
+    "q": "Differentiate between SIADH and diabetes insipidus in terms of ADH action.",
+    "answer": "SIADH (syndrome of inappropriate antidiuretic hormone secretion): Excessive or inappropriate ADH action causes increased water reabsorption in the kidneys, concentrated urine, water retention, and dilutional hyponatremia. Diabetes insipidus: ADH is deficient (central DI) or the kidneys do not respond to it (nephrogenic DI), causing reduced water reabsorption, large volumes of dilute urine, and increased thirst.",
+    "e": "SIADH retains too much water; diabetes insipidus loses too much water through dilute urine."
+  }
+]
